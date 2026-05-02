@@ -1,11 +1,16 @@
-const stats = [
-  { value: "15+", label: "Years Experience" },
-  { value: "2", label: "SaaS Products Launched" },
-  { value: "97%", label: "API Latency Reduction" },
-  { value: "8+", label: "Years Remote Engineering" },
-];
+import { getTranslations } from "next-intl/server";
 
-export default function Hero() {
+const statValues = ["15+", "2", "97%", "8+"];
+const statKeys = ["experience", "saas", "latency", "remote"] as const;
+
+export default async function Hero() {
+  const t = await getTranslations("Hero");
+
+  const stats = statValues.map((value, i) => ({
+    value,
+    label: t(`stats.${statKeys[i]}`),
+  }));
+
   return (
     <section
       id="hero"
@@ -16,24 +21,22 @@ export default function Hero() {
         {/* Left: Text content */}
         <div>
           <p className="mb-5 text-sm font-medium tracking-widest text-indigo-400 uppercase">
-            Available for Work
+            {t("badge")}
           </p>
 
           <h1 className="mb-5 text-4xl font-bold leading-tight tracking-tight text-white md:text-5xl lg:text-[3.25rem]">
-            Senior Software Engineer &amp;{" "}
+            {t("titlePart1")}{" "}
             <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-              Engineering Leader
+              {t("titleHighlight")}
             </span>
           </h1>
 
           <p className="mb-4 text-lg leading-relaxed text-zinc-300">
-            15+ years building cloud-native systems that scale — from government
-            portals to SaaS products used in production worldwide.
+            {t("subtitle")}
           </p>
 
           <p className="mb-9 text-base leading-relaxed text-zinc-400">
-            I architect distributed backends, lead cross-functional teams, and
-            ship products that work in production — not just on whiteboards.
+            {t("description")}
           </p>
 
           <div className="mb-6 flex flex-wrap items-center gap-4">
@@ -41,34 +44,30 @@ export default function Hero() {
               href="#contact"
               className="rounded-full bg-indigo-500 px-7 py-3 font-medium text-white transition-colors hover:bg-indigo-600"
             >
-              Hire Me
+              {t("cta")}
             </a>
             <a
               href="#work"
               className="rounded-full border border-white/10 px-7 py-3 font-medium text-zinc-300 transition-colors hover:border-white/30 hover:text-white"
             >
-              See My Work
+              {t("ctaWork")}
             </a>
           </div>
 
-          <p className="text-sm text-zinc-500">
-            📍 Ramallah, Palestine — Open to Remote Worldwide &amp; Relocation
-          </p>
+          <p className="text-sm text-zinc-500">{t("location")}</p>
         </div>
 
         {/* Right: Photo + stats */}
         <div className="flex flex-col items-center gap-8">
-          {/* Photo placeholder */}
           <div className="relative h-72 w-72 overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-indigo-500/20 to-purple-500/20">
             <div className="flex h-full flex-col items-center justify-center gap-3">
               <div className="flex h-24 w-24 items-center justify-center rounded-full bg-gradient-to-br from-indigo-400 to-purple-400">
                 <span className="text-3xl font-bold text-white">AS</span>
               </div>
-              <p className="text-xs text-zinc-500">Photo coming soon</p>
+              <p className="text-xs text-zinc-500">{t("photoSoon")}</p>
             </div>
           </div>
 
-          {/* Stat badges */}
           <div className="grid w-full grid-cols-2 gap-3">
             {stats.map((stat) => (
               <div

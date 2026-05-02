@@ -1,31 +1,37 @@
 "use client";
 
 import { useState, useEffect } from "react";
-
-const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Work", href: "#work" },
-  { label: "Experience", href: "#experience" },
-  { label: "Skills", href: "#skills" },
-  { label: "Volunteering", href: "#volunteering" },
-  { label: "SMB Services", href: "#smb" },
-  { label: "Contact", href: "#contact" },
-];
+import { useTranslations, useLocale } from "next-intl";
+import { useRouter, usePathname } from "@/i18n/routing";
 
 export default function Navbar() {
+  const t = useTranslations("Navbar");
+  const locale = useLocale();
+  const router = useRouter();
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    if (open) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+    document.body.style.overflow = open ? "hidden" : "";
     return () => {
       document.body.style.overflow = "";
     };
   }, [open]);
+
+  const navLinks = [
+    { label: t("links.about"), href: "#about" },
+    { label: t("links.services"), href: "#services" },
+    { label: t("links.work"), href: "#work" },
+    { label: t("links.experience"), href: "#experience" },
+    { label: t("links.skills"), href: "#skills" },
+    { label: t("links.volunteering"), href: "#volunteering" },
+    { label: t("links.smb"), href: "#smb" },
+    { label: t("links.contact"), href: "#contact" },
+  ];
+
+  const switchLocale = () => {
+    router.replace(pathname, { locale: locale === "en" ? "ar" : "en" });
+  };
 
   return (
     <>
@@ -52,18 +58,27 @@ export default function Navbar() {
             ))}
           </ul>
 
-          {/* Desktop CTA */}
-          <a
-            href="#contact"
-            className="hidden rounded-full bg-indigo-500 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-indigo-600 md:inline-flex"
-          >
-            Hire me
-          </a>
+          {/* Desktop actions */}
+          <div className="hidden items-center gap-3 md:flex">
+            <button
+              onClick={switchLocale}
+              className="rounded-full border border-white/10 px-3 py-1.5 text-xs font-medium text-zinc-400 transition-colors hover:border-white/30 hover:text-white"
+              aria-label={locale === "en" ? "Switch to Arabic" : "Switch to English"}
+            >
+              {locale === "en" ? "AR" : "EN"}
+            </button>
+            <a
+              href="#contact"
+              className="rounded-full bg-indigo-500 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-indigo-600"
+            >
+              {t("cta")}
+            </a>
+          </div>
 
           {/* Mobile burger */}
           <button
             onClick={() => setOpen((v) => !v)}
-            aria-label={open ? "Close menu" : "Open menu"}
+            aria-label={open ? t("closeMenu") : t("openMenu")}
             aria-expanded={open}
             className="relative flex h-9 w-9 flex-col items-center justify-center gap-1.5 rounded-lg md:hidden"
           >
@@ -93,7 +108,11 @@ export default function Navbar() {
         }`}
       >
         <div className="flex h-[73px] items-center justify-between border-b border-white/5 px-6">
-          <a href="#hero" className="text-lg font-bold tracking-tight text-white" onClick={() => setOpen(false)}>
+          <a
+            href="#hero"
+            className="text-lg font-bold tracking-tight text-white"
+            onClick={() => setOpen(false)}
+          >
             AS<span className="text-indigo-400">.</span>
           </a>
         </div>
@@ -121,13 +140,21 @@ export default function Navbar() {
             ))}
           </ul>
 
-          <a
-            href="#contact"
-            onClick={() => setOpen(false)}
-            className="mt-8 flex items-center justify-center rounded-full bg-indigo-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-indigo-600"
-          >
-            Hire me
-          </a>
+          <div className="mt-8 flex flex-col gap-3">
+            <button
+              onClick={() => { switchLocale(); setOpen(false); }}
+              className="rounded-full border border-white/10 py-3 text-sm font-medium text-zinc-400 transition-colors hover:border-white/30 hover:text-white"
+            >
+              {locale === "en" ? "العربية" : "English"}
+            </button>
+            <a
+              href="#contact"
+              onClick={() => setOpen(false)}
+              className="flex items-center justify-center rounded-full bg-indigo-500 px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-indigo-600"
+            >
+              {t("cta")}
+            </a>
+          </div>
         </nav>
       </div>
     </>

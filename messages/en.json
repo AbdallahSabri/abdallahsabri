@@ -1,0 +1,337 @@
+{
+  "Navbar": {
+    "links": {
+      "about": "About",
+      "services": "Services",
+      "work": "Work",
+      "experience": "Experience",
+      "skills": "Skills",
+      "volunteering": "Volunteering",
+      "smb": "SMB Services",
+      "contact": "Contact"
+    },
+    "cta": "Hire me",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "Hero": {
+    "badge": "Available for Work",
+    "titlePart1": "Senior Software Engineer &",
+    "titleHighlight": "Engineering Leader",
+    "subtitle": "15+ years building cloud-native systems that scale — from government portals to SaaS products used in production worldwide.",
+    "description": "I architect distributed backends, lead cross-functional teams, and ship products that work in production — not just on whiteboards.",
+    "cta": "Hire Me",
+    "ctaWork": "See My Work",
+    "location": "📍 Ramallah, Palestine — Open to Remote Worldwide & Relocation",
+    "photoSoon": "Photo coming soon",
+    "stats": {
+      "experience": "Years Experience",
+      "saas": "SaaS Products Launched",
+      "latency": "API Latency Reduction",
+      "remote": "Years Remote Engineering"
+    }
+  },
+  "About": {
+    "label": "About Me",
+    "headingPart1": "Engineer. Founder.",
+    "headingHighlight": "Builder.",
+    "paragraphs": [
+      "I'm Abdallah Sabri — a Senior Software Engineer with over 15 years of experience building backend systems, leading engineering teams, and turning complex problems into scalable, maintainable software.",
+      "My career has spanned government portals, travel tech, civic analytics, and healthcare SaaS. I've worked inside large enterprise environments and scrappy startup teams — and I've been on both sides of the table as an engineer and as a founder.",
+      "In late 2024, I launched Clincura, an AI-powered clinic management SaaS, and Level Feedback, a reputation management platform for small businesses. Building these products from zero has sharpened my instincts on system design, product decisions, and what actually matters when you're the one responsible for the outcome.",
+      "I'm based in Ramallah, Palestine, and actively looking for remote opportunities or roles that would allow me to relocate — particularly in Europe.",
+      "When I'm not building software, I'm investing in people — currently serving as President of Afaq Toastmasters Club, helping others grow their communication and leadership skills."
+    ],
+    "stats": [
+      { "value": "15+", "label": "Years of Engineering Experience" },
+      { "value": "2", "label": "SaaS Products Built & Launched" },
+      { "value": "97%", "label": "API Response Time Cut in Production (BFF layer, Ride With Via)" },
+      { "value": "5", "label": "Legacy Services Unified into One Platform (Zencity)" },
+      { "value": "8+", "label": "Years Remote Engineering" }
+    ]
+  },
+  "Services": {
+    "label": "What I Do",
+    "heading": "How I can help",
+    "description": "Whether you need an engineering partner to build your backend from scratch, a consultant to fix a performance problem, or a technical leader to help scale your team — I've done it before and can do it for you.",
+    "items": [
+      {
+        "title": "Backend Architecture & System Design",
+        "audience": "For startups and scale-ups who need their foundations to hold.",
+        "description": "Designing distributed, cloud-native systems using Node.js, TypeScript, NestJS, and microservices. From API design to event-driven architecture — built to scale."
+      },
+      {
+        "title": "Performance Engineering",
+        "audience": "For teams where latency is costing them users and trust.",
+        "description": "Deep-dive optimization of slow APIs, inefficient database queries, and bottlenecked services. I've cut API response times by 97% in production. I know where to look."
+      },
+      {
+        "title": "Cloud & DevOps (AWS)",
+        "audience": "For teams who want reliability without DevOps overhead.",
+        "description": "Architecture and deployment on AWS: Lambda, S3, RDS, SQS, SNS, Cognito. Paired with CI/CD pipelines, Docker, and infrastructure that actually holds up under load."
+      },
+      {
+        "title": "Monolith to Microservices Migration",
+        "audience": "For teams stuck in legacy systems that are slowing them down.",
+        "description": "Planning and executing migrations from monolithic codebases to modular, maintainable microservices — without breaking production or burning out the team."
+      },
+      {
+        "title": "Technical Leadership & Team Mentoring",
+        "audience": "For growing teams who need someone to set the standard.",
+        "description": "Engineering process definition, code review culture, onboarding structures, and hands-on mentorship. I've led 5-person teams and grown juniors into confident engineers."
+      },
+      {
+        "title": "SaaS Product Consulting",
+        "audience": "For founders who are engineers, or engineers who are becoming founders.",
+        "description": "Technical strategy, architecture decisions, stack selection, and build vs. buy tradeoffs. Grounded in real experience building two SaaS products from scratch."
+      }
+    ]
+  },
+  "Work": {
+    "label": "Projects & Work",
+    "heading": "Selected work",
+    "description": "A selection of the systems I've built, led, or contributed to across healthcare, civic tech, transit, and travel.",
+    "viewProject": "View project →",
+    "items": [
+      {
+        "title": "Clincura",
+        "role": "Founder & Architect",
+        "period": "Dec 2024 – Present",
+        "description": "An AI-powered clinic management SaaS platform built for multi-clinic operations. Handles scheduling, patient records, billing, and staff management — live with paying clients.",
+        "stack": ["NestJS", "TypeScript", "PostgreSQL", "RabbitMQ", "JWT/RBAC", "OpenAPI"],
+        "tags": ["SaaS Product", "Healthcare Tech", "Founder"],
+        "featured": true
+      },
+      {
+        "title": "Level Feedback",
+        "role": "Founder & Architect",
+        "period": "Dec 2024 – Present",
+        "description": "A platform automating Google Business Profile management and reputation monitoring for small businesses. Built with a focus on simplicity for non-technical SMB owners.",
+        "stack": ["Next.js", "Firebase", "Stripe", "Twilio", "QStash", "Vercel"],
+        "tags": ["SaaS Product", "SMB", "Founder"],
+        "featured": true
+      },
+      {
+        "title": "Ride With Via — BFF Layer",
+        "role": "Senior Engineer @ ASAL Technologies",
+        "period": "2021 – 2023",
+        "description": "Designed and implemented a Backend For Frontend (BFF) architecture that reduced API response times from 1–2 minutes down to under 3 seconds — a 97% improvement. Supported 100,000+ active users across on-demand and pre-booking transit.",
+        "stack": ["Node.js", "Microservices", "REST APIs", "React.js", "Redux"],
+        "tags": ["Transit Tech", "Performance", "Scale"]
+      },
+      {
+        "title": "Zencity — Unified Publication System",
+        "role": "Senior Engineer @ ASAL Technologies",
+        "period": "2023 – 2024",
+        "description": "Consolidated 5 legacy notification services into a single unified delivery system for email and in-app communications across 300+ government clients. Eliminated cross-service inconsistencies and reduced maintenance overhead.",
+        "stack": ["Node.js", "TypeScript", "React.js", "Module Federation", "Storybook"],
+        "tags": ["GovTech", "Platform Engineering"]
+      },
+      {
+        "title": "Safarway — Microservices Migration",
+        "role": "Senior Engineer & Team Leader",
+        "period": "2018 – 2021",
+        "description": "Led the microservices migration for a global travel platform — scaling to ~1M users and 100,000+ property listings worldwide. Architected services for Social Engine, User Profiles, and Property Management.",
+        "stack": ["Node.js", "Microservices", "PostgreSQL", "MongoDB"],
+        "tags": ["Travel Tech", "Scale", "Team Lead"]
+      },
+      {
+        "title": "Ministry of Transport — Citizen Portal",
+        "role": "Senior Software Engineer",
+        "period": "2014 – 2018",
+        "description": "Built the Palestinian Ministry of Transport's public-facing website and citizen portal. Integrated systems across multiple government ministries for unified data access and service delivery.",
+        "stack": ["Web", "Government Systems Integration"],
+        "tags": ["GovTech", "Public Sector"]
+      }
+    ]
+  },
+  "Experience": {
+    "label": "Experience",
+    "heading": "Career timeline",
+    "description": "15+ years across government, enterprise, scale-up, and startup environments.",
+    "ariaLabel": "Career timeline",
+    "entries": [
+      {
+        "type": "role",
+        "dot": "green",
+        "title": "Independent Software Engineer & Founder",
+        "org": "Self-Employed",
+        "period": "Dec 2024 – Present",
+        "location": "Ramallah, Palestine (Remote)",
+        "bullets": [
+          "Founded and launched Clincura (healthcare SaaS) and Level Feedback (SMB reputation platform).",
+          "Architected full-stack systems independently, from database schema to deployment pipelines.",
+          "Implemented JWT/RBAC authorization across both products for compliance and access control."
+        ]
+      },
+      {
+        "type": "role",
+        "dot": "blue",
+        "title": "Senior Software Engineer",
+        "org": "ASAL Technologies",
+        "period": "Mar 2021 – Dec 2024",
+        "location": "Palestine (Remote)",
+        "bullets": [
+          "Ride With Via (2021–2023): Designed BFF layer; cut API response times by 97%; supported 100K+ users.",
+          "Zencity (2023–2024): Consolidated 5 legacy services into a unified notification system for 300+ government clients; built drag-and-drop Report Builder with Module Federation; maintained shared Storybook component library.",
+          "Mentored 3 junior engineers through full onboarding — all 3 converted to full-time roles."
+        ]
+      },
+      {
+        "type": "role",
+        "dot": "yellow",
+        "title": "Senior Software Engineer & Team Leader",
+        "org": "Safarway",
+        "period": "Jun 2018 – Feb 2021",
+        "location": "Palestine",
+        "bullets": [
+          "Defined technical roadmap with founders and delivered first working POC.",
+          "Led microservices migration and scaled platform to ~1M users and 100,000+ property listings.",
+          "Built 'Operation Manager' — internal logistics tool for 100,000+ global properties.",
+          "Grew and led a 5-person engineering team."
+        ]
+      },
+      {
+        "type": "role",
+        "dot": "red",
+        "title": "Senior Software Engineer",
+        "org": "Ministry of Transport (Palestinian Authority)",
+        "period": "Feb 2014 – May 2018",
+        "location": "Palestine",
+        "bullets": [
+          "Built the main public website and citizen service portal.",
+          "Integrated backend systems across multiple government ministries."
+        ]
+      },
+      {
+        "type": "role",
+        "dot": "gray",
+        "title": "Software Engineer",
+        "org": "Andalus",
+        "period": "Jun 2010 – Jan 2014",
+        "location": "Palestine",
+        "bullets": [
+          "Built a web-based Point of Sale (POS) system for retail operations."
+        ]
+      },
+      {
+        "type": "education",
+        "dot": "purple",
+        "title": "B.Sc. in Information & Communication Technologies",
+        "org": "Al-Quds Open University",
+        "period": "Graduated 2010",
+        "bullets": []
+      }
+    ]
+  },
+  "Skills": {
+    "label": "Skills & Toolkit",
+    "heading": "What I build with",
+    "groups": [
+      { "category": "Languages", "skills": ["JavaScript (ES6+)", "TypeScript", "SQL", "HTML5", "CSS3"] },
+      { "category": "Backend", "skills": ["Node.js", "NestJS", "Express.js", "Microservices", "BFF Architecture", "REST APIs"] },
+      { "category": "Databases & Messaging", "skills": ["PostgreSQL", "MongoDB", "DynamoDB", "Redis", "RabbitMQ", "SQS", "SNS"] },
+      { "category": "Frontend", "skills": ["React.js", "Next.js", "Redux", "React Query", "Material UI", "Storybook"] },
+      { "category": "Cloud & DevOps", "skills": ["AWS (Lambda, S3, RDS, Cognito)", "Firebase (Auth, Firestore, Storage)", "Docker", "CI/CD Pipelines", "Vercel", "Swagger / OpenAPI"] },
+      { "category": "Architecture", "skills": ["Event-Driven Architecture", "Distributed Systems", "Monolith to Microservices", "Scalability Engineering"] },
+      { "category": "Testing", "skills": ["Jest", "Unit Testing", "Integration Testing", "Test-Driven Development (TDD)"] },
+      { "category": "Practices", "skills": ["System Design", "Performance Optimization", "Technical Leadership", "Agile / Scrum", "Code Review"] }
+    ]
+  },
+  "Volunteering": {
+    "label": "Community",
+    "heading": "Volunteering & Community",
+    "description": "Beyond the code, I believe in investing in people — helping them communicate better, lead with confidence, and grow in their communities.",
+    "items": [
+      {
+        "imageAlt": "Afaq Toastmasters Club meeting",
+        "org": "Afaq Toastmasters Club",
+        "role": "President",
+        "period": "Jan 2025 – Jul 2026",
+        "description": "Leading the club's operations, weekly meetings, and member development programs with a focus on public speaking and leadership development. Responsible for setting the club's strategic direction and fostering an environment where members build communication confidence."
+      },
+      {
+        "imageAlt": "Afaq University Students Association",
+        "org": "Afaq University Students Association",
+        "role": "Secretary",
+        "period": "Jul 2024 – Jul 2026",
+        "description": "Managing administrative operations and communications for the student association. Supporting university community initiatives and student affairs — ensuring the association runs efficiently and that student voices are heard and acted upon."
+      }
+    ]
+  },
+  "SMBServices": {
+    "label": "For SMBs",
+    "heading": "For Small & Medium Businesses",
+    "description": "Running a business and need tech that actually works for you — without the agency overhead or the risk of hiring the wrong team? I work directly with SMB owners and operators who need results, not presentations.",
+    "ctaPrompt": "Not sure which service fits your situation?",
+    "ctaLink": "Book a free 30-minute consultation →",
+    "items": [
+      {
+        "title": "Custom Software Development",
+        "hook": "Got a business problem? I'll build the solution.",
+        "description": "From customer portals to internal operations tools — I design and build custom web software tailored to your workflow. No templates. No bloated agency retainers. Direct work with you from brief to launch."
+      },
+      {
+        "title": "Tech Stack Audit & Optimization",
+        "hook": "Is your current tech slowing your team down?",
+        "description": "I'll review your existing systems, identify bottlenecks, and give you a clear roadmap for improvement. Whether it's a slow website, a clunky internal tool, or an integration problem — I'll tell you exactly what needs to change and why."
+      },
+      {
+        "title": "Digital Presence & Reputation Management",
+        "hook": "Powered by Level Feedback — my own product.",
+        "description": "For businesses that rely on Google reviews and local visibility: automated review request campaigns, Google Business Profile management, and customer feedback workflows. Built specifically for SMBs that don't have a marketing team."
+      }
+    ]
+  },
+  "Contact": {
+    "label": "Get In Touch",
+    "heading": "Let's talk",
+    "description": "Whether you're looking to hire, collaborate, or explore a consulting engagement — I'd love to hear what you're working on.",
+    "detailsHeading": "Contact Details",
+    "contactItems": [
+      { "label": "Email", "display": "abdallah.silwad@gmail.com" },
+      { "label": "Phone — MENA", "display": "+970 592 090 780" },
+      { "label": "WhatsApp — MENA", "display": "+970 592 090 780" },
+      { "label": "Phone — Outside MENA", "display": "+1 225 446 5588" },
+      { "label": "LinkedIn", "display": "linkedin.com/in/abdallah-sabri" },
+      { "label": "Location", "display": "Ramallah, Palestine — Open to Remote Worldwide & Relocation" }
+    ],
+    "form": {
+      "fullName": "Full Name",
+      "emailAddress": "Email Address",
+      "company": "Company / Organization",
+      "companyOptional": "optional",
+      "topic": "I'm reaching out about…",
+      "topicPlaceholder": "Select a topic",
+      "topics": {
+        "job": "Job Opportunity",
+        "consulting": "Consulting / Project",
+        "smb": "SMB Services",
+        "partnership": "Partnership",
+        "other": "Other"
+      },
+      "message": "Tell me more",
+      "messagePlaceholder": "Brief description of what you're working on or what you need…",
+      "contactMethod": "Preferred contact method",
+      "methods": ["Email", "WhatsApp", "Phone Call"],
+      "submit": "Send Message",
+      "responseNote": "I typically respond within 24–48 hours. For urgent enquiries,",
+      "responseNoteWhatsApp": "WhatsApp",
+      "responseNoteEnd": "is the fastest way to reach me."
+    }
+  },
+  "Footer": {
+    "nav": {
+      "about": "About",
+      "services": "Services",
+      "work": "Work",
+      "contact": "Contact"
+    },
+    "social": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "twitter": "Twitter"
+    },
+    "copyright": "© {year} {name}. All rights reserved."
+  }
+}

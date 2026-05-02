@@ -1,43 +1,15 @@
 import Image from "next/image";
+import { getTranslations } from "next-intl/server";
 import SectionLabel from "@/components/ui/SectionLabel";
 
-type VolunteerCard = {
-  image: string;
-  imageAlt: string;
-  icon: string;
-  org: string;
-  role: string;
-  period: string;
-  description: string;
-};
-
-const cards: VolunteerCard[] = [
-  {
-    image: "/volunteering/afaq-toastmasters.jpg",
-    imageAlt: "Afaq Toastmasters Club meeting",
-    icon: "🎤",
-    org: "Afaq Toastmasters Club",
-    role: "President",
-    period: "Jan 2025 – Jul 2026",
-    description:
-      "Leading the club's operations, weekly meetings, and member development programs with a focus on public speaking and leadership development. Responsible for setting the club's strategic direction and fostering an environment where members build communication confidence.",
-  },
-  {
-    image: "/volunteering/afaq-students.jpg",
-    imageAlt: "Afaq University Students Association",
-    icon: "🎓",
-    org: "Afaq University Students Association",
-    role: "Secretary",
-    period: "Jul 2024 – Jul 2026",
-    description:
-      "Managing administrative operations and communications for the student association. Supporting university community initiatives and student affairs — ensuring the association runs efficiently and that student voices are heard and acted upon.",
-  },
+const cardImages = [
+  { src: "/volunteering/afaq-toastmasters.jpg", icon: "🎤" },
+  { src: "/volunteering/afaq-students.jpg", icon: "🎓" },
 ];
 
 function ImageSlot({ src, alt }: { src: string; alt: string }) {
   return (
     <div className="relative h-48 w-full overflow-hidden rounded-t-2xl bg-gradient-to-br from-indigo-500/10 to-purple-500/10">
-      {/* Placeholder sits beneath — covered by the image once it loads */}
       <div className="absolute inset-0 flex items-center justify-center" aria-hidden="true">
         <span className="text-4xl opacity-20">🖼</span>
       </div>
@@ -52,7 +24,18 @@ function ImageSlot({ src, alt }: { src: string; alt: string }) {
   );
 }
 
-export default function Volunteering() {
+export default async function Volunteering() {
+  const t = await getTranslations("Volunteering");
+  const items = t.raw("items") as Array<{
+    imageAlt: string;
+    org: string;
+    role: string;
+    period: string;
+    description: string;
+  }>;
+
+  const cards = items.map((item, i) => ({ ...item, ...cardImages[i] }));
+
   return (
     <section
       id="volunteering"
@@ -61,27 +44,25 @@ export default function Volunteering() {
     >
       <div className="mx-auto max-w-6xl">
         <div className="mb-16 text-center">
-          <SectionLabel>Community</SectionLabel>
+          <SectionLabel>{t("label")}</SectionLabel>
           <h2
             id="volunteering-heading"
             className="mt-4 text-4xl font-bold tracking-tight text-white"
           >
-            Volunteering &amp; Community
+            {t("heading")}
           </h2>
           <p className="mx-auto mt-4 max-w-xl leading-relaxed text-zinc-400">
-            Beyond the code, I believe in investing in people — helping them
-            communicate better, lead with confidence, and grow in their
-            communities.
+            {t("description")}
           </p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-2">
-          {cards.map(({ image, imageAlt, icon, org, role, period, description }) => (
+          {cards.map(({ src, imageAlt, icon, org, role, period, description }) => (
             <article
               key={org}
               className="overflow-hidden rounded-2xl border border-white/5 bg-[#18181b] transition-colors hover:border-white/10"
             >
-              <ImageSlot src={image} alt={imageAlt} />
+              <ImageSlot src={src} alt={imageAlt} />
 
               <div className="p-6">
                 <div className="mb-1 flex items-center gap-2">

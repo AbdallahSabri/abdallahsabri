@@ -1,86 +1,10 @@
+import { getTranslations } from "next-intl/server";
 import SectionLabel from "@/components/ui/SectionLabel";
 
-const groups = [
-  {
-    category: "Languages",
-    skills: ["JavaScript (ES6+)", "TypeScript", "SQL", "HTML5", "CSS3"],
-  },
-  {
-    category: "Backend",
-    skills: [
-      "Node.js",
-      "NestJS",
-      "Express.js",
-      "Microservices",
-      "BFF Architecture",
-      "REST APIs",
-    ],
-  },
-  {
-    category: "Databases & Messaging",
-    skills: [
-      "PostgreSQL",
-      "MongoDB",
-      "DynamoDB",
-      "Redis",
-      "RabbitMQ",
-      "SQS",
-      "SNS",
-    ],
-  },
-  {
-    category: "Frontend",
-    skills: [
-      "React.js",
-      "Next.js",
-      "Redux",
-      "React Query",
-      "Material UI",
-      "Storybook",
-    ],
-  },
-  {
-    category: "Cloud & DevOps",
-    skills: [
-      "AWS (Lambda, S3, RDS, Cognito)",
-      "Firebase (Auth, Firestore, Storage)",
-      "Docker",
-      "CI/CD Pipelines",
-      "Vercel",
-      "Swagger / OpenAPI",
-    ],
-  },
-  {
-    category: "Architecture",
-    skills: [
-      "Event-Driven Architecture",
-      "Distributed Systems",
-      "Monolith to Microservices",
-      "Scalability Engineering",
-    ],
-  },
-  {
-    category: "Testing",
-    skills: [
-      "Jest",
-      "Unit Testing",
-      "Integration Testing",
-      "Test-Driven Development (TDD)",
-    ],
-  },
-  {
-    category: "Practices",
-    skills: [
-      "System Design",
-      "Performance Optimization",
-      "Technical Leadership",
-      "Agile / Scrum",
-      "Code Review",
-    ],
-  },
-];
+export default async function Skills() {
+  const t = await getTranslations("Skills");
+  const groups = t.raw("groups") as Array<{ category: string; skills: string[] }>;
 
-export default function Skills() {
   return (
     <section
       id="skills"
@@ -89,12 +13,12 @@ export default function Skills() {
     >
       <div className="mx-auto max-w-6xl">
         <div className="mb-16 text-center">
-          <SectionLabel>Skills &amp; Toolkit</SectionLabel>
+          <SectionLabel>{t("label")}</SectionLabel>
           <h2
             id="skills-heading"
             className="mt-4 text-4xl font-bold tracking-tight text-white"
           >
-            What I build with
+            {t("heading")}
           </h2>
         </div>
 

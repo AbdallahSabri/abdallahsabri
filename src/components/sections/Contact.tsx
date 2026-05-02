@@ -1,44 +1,15 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import SectionLabel from "@/components/ui/SectionLabel";
 
-const contactDetails = [
-  {
-    label: "Email",
-    icon: "📧",
-    display: "abdallah.silwad@gmail.com",
-    href: "mailto:abdallah.silwad@gmail.com",
-  },
-  {
-    label: "Phone — MENA",
-    icon: "📞",
-    display: "+970 592 090 780",
-    href: "tel:+970592090780",
-  },
-  {
-    label: "WhatsApp — MENA",
-    icon: "💬",
-    display: "+970 592 090 780",
-    href: "https://wa.me/970592090780",
-  },
-  {
-    label: "Phone — Outside MENA",
-    icon: "📞",
-    display: "+1 225 446 5588",
-    href: "tel:+12254465588",
-  },
-  {
-    label: "LinkedIn",
-    icon: "🔗",
-    display: "linkedin.com/in/abdallah-sabri",
-    href: "https://linkedin.com/in/abdallah-sabri",
-  },
-  {
-    label: "Location",
-    icon: "📍",
-    display: "Ramallah, Palestine — Open to Remote Worldwide & Relocation",
-    href: null,
-  },
+const contactHrefs = [
+  "mailto:abdallah.silwad@gmail.com",
+  "tel:+970592090780",
+  "https://wa.me/970592090780",
+  "tel:+12254465588",
+  "https://linkedin.com/in/abdallah-sabri",
+  null,
 ];
 
 const inputClass =
@@ -47,6 +18,13 @@ const inputClass =
 const labelClass = "mb-1.5 block text-sm text-zinc-400";
 
 export default function Contact() {
+  const t = useTranslations("Contact");
+  const contactItems = t.raw("contactItems") as Array<{
+    label: string;
+    display: string;
+  }>;
+  const methods = t.raw("form.methods") as string[];
+
   return (
     <section
       id="contact"
@@ -55,16 +33,15 @@ export default function Contact() {
     >
       <div className="mx-auto max-w-6xl">
         <div className="mb-16 text-center">
-          <SectionLabel>Get In Touch</SectionLabel>
+          <SectionLabel>{t("label")}</SectionLabel>
           <h2
             id="contact-heading"
             className="mt-4 text-4xl font-bold tracking-tight text-white"
           >
-            Let&apos;s talk
+            {t("heading")}
           </h2>
           <p className="mx-auto mt-4 max-w-xl leading-relaxed text-zinc-400">
-            Whether you&apos;re looking to hire, collaborate, or explore a consulting
-            engagement — I&apos;d love to hear what you&apos;re working on.
+            {t("description")}
           </p>
         </div>
 
@@ -72,31 +49,35 @@ export default function Contact() {
           {/* Left: Contact details */}
           <div>
             <h3 className="mb-6 text-sm font-semibold tracking-widest text-zinc-500 uppercase">
-              Contact Details
+              {t("detailsHeading")}
             </h3>
             <ul className="space-y-4">
-              {contactDetails.map(({ label, icon, display, href }) => (
-                <li key={label} className="flex items-start gap-3">
-                  <span className="mt-0.5 text-base" aria-hidden="true">
-                    {icon}
-                  </span>
-                  <div>
-                    <p className="text-xs text-zinc-600">{label}</p>
-                    {href ? (
-                      <a
-                        href={href}
-                        target={href.startsWith("http") ? "_blank" : undefined}
-                        rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-                        className="text-sm text-zinc-300 transition-colors hover:text-indigo-400"
-                      >
-                        {display}
-                      </a>
-                    ) : (
-                      <p className="text-sm text-zinc-300">{display}</p>
-                    )}
-                  </div>
-                </li>
-              ))}
+              {contactItems.map(({ label, display }, i) => {
+                const href = contactHrefs[i];
+                const icons = ["📧", "📞", "💬", "📞", "🔗", "📍"];
+                return (
+                  <li key={label} className="flex items-start gap-3">
+                    <span className="mt-0.5 text-base" aria-hidden="true">
+                      {icons[i]}
+                    </span>
+                    <div>
+                      <p className="text-xs text-zinc-600">{label}</p>
+                      {href ? (
+                        <a
+                          href={href}
+                          target={href.startsWith("http") ? "_blank" : undefined}
+                          rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+                          className="text-sm text-zinc-300 transition-colors hover:text-indigo-400"
+                        >
+                          {display}
+                        </a>
+                      ) : (
+                        <p className="text-sm text-zinc-300">{display}</p>
+                      )}
+                    </div>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
@@ -109,7 +90,7 @@ export default function Contact() {
             <div className="grid gap-4 sm:grid-cols-2">
               <div>
                 <label htmlFor="full-name" className={labelClass}>
-                  Full Name <span className="text-indigo-400">*</span>
+                  {t("form.fullName")} <span className="text-indigo-400">*</span>
                 </label>
                 <input
                   id="full-name"
@@ -122,7 +103,7 @@ export default function Contact() {
               </div>
               <div>
                 <label htmlFor="email" className={labelClass}>
-                  Email Address <span className="text-indigo-400">*</span>
+                  {t("form.emailAddress")} <span className="text-indigo-400">*</span>
                 </label>
                 <input
                   id="email"
@@ -137,8 +118,8 @@ export default function Contact() {
 
             <div>
               <label htmlFor="company" className={labelClass}>
-                Company / Organization{" "}
-                <span className="text-zinc-600">(optional)</span>
+                {t("form.company")}{" "}
+                <span className="text-zinc-600">({t("form.companyOptional")})</span>
               </label>
               <input
                 id="company"
@@ -151,7 +132,7 @@ export default function Contact() {
 
             <div>
               <label htmlFor="topic" className={labelClass}>
-                I&apos;m reaching out about… <span className="text-indigo-400">*</span>
+                {t("form.topic")} <span className="text-indigo-400">*</span>
               </label>
               <select
                 id="topic"
@@ -160,32 +141,32 @@ export default function Contact() {
                 className={`${inputClass} cursor-pointer appearance-none`}
               >
                 <option value="" disabled>
-                  Select a topic
+                  {t("form.topicPlaceholder")}
                 </option>
-                <option value="job">Job Opportunity</option>
-                <option value="consulting">Consulting / Project</option>
-                <option value="smb">SMB Services</option>
-                <option value="partnership">Partnership</option>
-                <option value="other">Other</option>
+                <option value="job">{t("form.topics.job")}</option>
+                <option value="consulting">{t("form.topics.consulting")}</option>
+                <option value="smb">{t("form.topics.smb")}</option>
+                <option value="partnership">{t("form.topics.partnership")}</option>
+                <option value="other">{t("form.topics.other")}</option>
               </select>
             </div>
 
             <div>
               <label htmlFor="message" className={labelClass}>
-                Tell me more
+                {t("form.message")}
               </label>
               <textarea
                 id="message"
                 rows={5}
-                placeholder="Brief description of what you're working on or what you need…"
+                placeholder={t("form.messagePlaceholder")}
                 className={`${inputClass} resize-none`}
               />
             </div>
 
             <fieldset>
-              <legend className={labelClass}>Preferred contact method</legend>
+              <legend className={labelClass}>{t("form.contactMethod")}</legend>
               <div className="mt-2 flex flex-wrap gap-5">
-                {(["Email", "WhatsApp", "Phone Call"] as const).map((method) => (
+                {methods.map((method) => (
                   <label
                     key={method}
                     className="flex cursor-pointer items-center gap-2 text-sm text-zinc-300"
@@ -193,7 +174,7 @@ export default function Contact() {
                     <input
                       type="radio"
                       name="contact-method"
-                      value={method.toLowerCase().replace(" ", "-")}
+                      value={method.toLowerCase().replace(/\s+/g, "-")}
                       className="accent-indigo-500"
                     />
                     {method}
@@ -206,20 +187,20 @@ export default function Contact() {
               type="submit"
               className="w-full rounded-xl bg-indigo-500 py-3.5 font-medium text-white transition-colors hover:bg-indigo-600"
             >
-              Send Message
+              {t("form.submit")}
             </button>
 
             <p className="text-center text-xs text-zinc-600">
-              I typically respond within 24–48 hours. For urgent enquiries,{" "}
+              {t("form.responseNote")}{" "}
               <a
                 href="https://wa.me/970592090780"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-zinc-500 underline underline-offset-2 hover:text-zinc-300"
               >
-                WhatsApp
+                {t("form.responseNoteWhatsApp")}
               </a>{" "}
-              is the fastest way to reach me.
+              {t("form.responseNoteEnd")}
             </p>
           </form>
         </div>
