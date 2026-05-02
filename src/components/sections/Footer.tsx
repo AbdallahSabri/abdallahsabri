@@ -1,19 +1,30 @@
+import { getTranslations } from "next-intl/server";
 import { siteConfig } from "@/lib/metadata";
 
-const socialLinks = [
-  { label: "GitHub", href: "https://github.com" },
-  { label: "LinkedIn", href: "https://linkedin.com" },
-  { label: "Twitter", href: "https://twitter.com" },
-];
+const socialHrefs = {
+  github: "https://github.com",
+  linkedin: "https://linkedin.com",
+  twitter: "https://twitter.com",
+};
 
-const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Work", href: "#work" },
-  { label: "Contact", href: "#contact" },
-];
+const navHrefs = {
+  about: "#about",
+  services: "#services",
+  work: "#work",
+  contact: "#contact",
+};
 
-export default function Footer() {
+export default async function Footer() {
+  const t = await getTranslations("Footer");
+
+  const navLinks = (Object.keys(navHrefs) as Array<keyof typeof navHrefs>).map(
+    (key) => ({ label: t(`nav.${key}`), href: navHrefs[key] })
+  );
+
+  const socialLinks = (Object.keys(socialHrefs) as Array<keyof typeof socialHrefs>).map(
+    (key) => ({ label: t(`social.${key}`), href: socialHrefs[key] })
+  );
+
   return (
     <footer className="border-t border-white/5 px-6 py-12">
       <div className="mx-auto max-w-6xl">
@@ -54,7 +65,12 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 border-t border-white/5 pt-8 text-center text-sm text-zinc-600">
-          <p>© {new Date().getFullYear()} {siteConfig.name}. All rights reserved.</p>
+          <p>
+            {t("copyright", {
+              year: new Date().getFullYear(),
+              name: siteConfig.name,
+            })}
+          </p>
         </div>
       </div>
     </footer>

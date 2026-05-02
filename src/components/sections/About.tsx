@@ -1,63 +1,52 @@
+import { getTranslations } from "next-intl/server";
 import SectionLabel from "@/components/ui/SectionLabel";
 
-const stats = [
-  { value: "5+", label: "Years of experience" },
-  { value: "40+", label: "Projects delivered" },
-  { value: "20+", label: "Happy clients" },
-];
+export default async function About() {
+  const t = await getTranslations("About");
+  const paragraphs = t.raw("paragraphs") as string[];
+  const stats = t.raw("stats") as Array<{ value: string; label: string }>;
 
-export default function About() {
   return (
-    <section id="about" className="section-padding bg-[#18181b]" aria-labelledby="about-heading">
+    <section
+      id="about"
+      className="section-padding bg-[#18181b]"
+      aria-labelledby="about-heading"
+    >
       <div className="mx-auto max-w-6xl">
-        <div className="grid gap-16 md:grid-cols-2 md:items-center">
+        <div className="grid gap-16 lg:grid-cols-[1fr_340px] lg:items-start">
+          {/* Left: Body copy */}
           <div>
-            <SectionLabel>About me</SectionLabel>
+            <SectionLabel>{t("label")}</SectionLabel>
             <h2
               id="about-heading"
               className="mt-4 text-4xl font-bold leading-tight tracking-tight text-white"
             >
-              Passionate about clean code &amp; great UX
+              {t("headingPart1")}{" "}
+              <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
+                {t("headingHighlight")}
+              </span>
             </h2>
-            <p className="mt-6 leading-relaxed text-zinc-400">
-              I&apos;m a full-stack developer with a deep focus on building performant, accessible,
-              and visually polished web applications. I care equally about developer experience and
-              end-user experience.
-            </p>
-            <p className="mt-4 leading-relaxed text-zinc-400">
-              When I&apos;m not coding, you can find me exploring new design patterns, contributing
-              to open-source projects, or writing about web development.
-            </p>
 
-            <div className="mt-10 flex flex-wrap gap-3">
-              {[
-                "React",
-                "Next.js",
-                "TypeScript",
-                "Node.js",
-                "PostgreSQL",
-                "Tailwind CSS",
-                "GraphQL",
-                "Docker",
-              ].map((skill) => (
-                <span
-                  key={skill}
-                  className="rounded-full border border-white/10 px-3 py-1 text-sm text-zinc-300"
-                >
-                  {skill}
-                </span>
+            <div className="mt-6 space-y-4">
+              {paragraphs.map((text, i) => (
+                <p key={i} className="leading-relaxed text-zinc-400">
+                  {text}
+                </p>
               ))}
             </div>
           </div>
 
-          <div className="grid grid-cols-3 gap-6">
+          {/* Right: Stat cards */}
+          <div className="flex flex-col gap-4">
             {stats.map(({ value, label }) => (
               <div
                 key={label}
-                className="rounded-2xl border border-white/5 bg-[#0f0f0f] p-6 text-center"
+                className="flex items-center gap-4 rounded-2xl border border-white/5 bg-[#0f0f0f] px-6 py-5"
               >
-                <p className="text-4xl font-bold text-indigo-400">{value}</p>
-                <p className="mt-2 text-sm text-zinc-500">{label}</p>
+                <p className="min-w-[3.5rem] text-3xl font-bold text-indigo-400">
+                  {value}
+                </p>
+                <p className="text-sm leading-snug text-zinc-400">{label}</p>
               </div>
             ))}
           </div>
