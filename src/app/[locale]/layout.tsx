@@ -71,11 +71,28 @@ export async function generateMetadata({
       siteName: "Abdallah Sabri",
       locale: isAr ? "ar_AR" : "en_US",
       alternateLocale: isAr ? "en_US" : "ar_AR",
+      images: [
+        {
+          url: "https://abdallahsabri.com/og-image.jpg",
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      creator: "@abdallahsabri",
+      images: [
+        {
+          url: "https://abdallahsabri.com/og-image.jpg",
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
     },
     robots: {
       index: true,
