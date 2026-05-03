@@ -57,7 +57,14 @@ export const defaultMetadata: Metadata = {
     title: siteConfig.title,
     description: siteConfig.description,
     creator: siteConfig.twitterHandle,
-    images: [siteConfig.ogImage],
+    images: [
+      {
+        url: siteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: siteConfig.title,
+      },
+    ],
   },
   robots: {
     index: true,
