@@ -41,7 +41,7 @@ export default function Navbar() {
           aria-label="Main navigation"
         >
           <a href="#hero" className="text-lg font-bold tracking-tight text-white">
-            AS<span className="text-indigo-400">.</span>
+            Abdallah Sabri
           </a>
 
           {/* Desktop nav */}
@@ -113,7 +113,7 @@ export default function Navbar() {
             className="text-lg font-bold tracking-tight text-white"
             onClick={() => setOpen(false)}
           >
-            AS<span className="text-indigo-400">.</span>
+            Abdallah Sabri
           </a>
         </div>
 

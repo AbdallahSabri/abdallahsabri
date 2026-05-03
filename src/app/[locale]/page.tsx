@@ -7,7 +7,6 @@ import Work from "@/components/sections/Work";
 import Experience from "@/components/sections/Experience";
 import Skills from "@/components/sections/Skills";
 import Volunteering from "@/components/sections/Volunteering";
-import SMBServices from "@/components/sections/SMBServices";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
 
@@ -23,7 +22,7 @@ export default function Home() {
         <Experience />
         <Skills />
         <Volunteering />
-        <SMBServices />
+        {/*<SMBServices />*/}
         <Contact />
       </main>
       <Footer />
