@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const siteConfig = {
   name: "Abdallah Sabri",
-  title: "Abdallah Sabri — Full-Stack Developer",
+  title: "Abdallah Sabri — Full-Stack Engineer",
   description:
     "Full-stack developer specializing in modern web applications. Building fast, scalable, and beautiful digital experiences.",
   url: "https://abdallahsabri.com",
