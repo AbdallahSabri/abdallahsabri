@@ -1,12 +1,12 @@
 import { Resend } from "resend";
 import { NextRequest, NextResponse } from "next/server";
 
-const resend = new Resend(process.env.EMAIL_SERVICE_API_KEY);
-
 export async function POST(req: NextRequest) {
   if (process.env.NODE_ENV !== "production") {
-    return ;
+    return NextResponse.json({ ok: true });
   }
+
+  const resend = new Resend(process.env.EMAIL_SERVICE_API_KEY);
   const { fullName, email, company, topic, message, contactMethod } =
     await req.json();
 
