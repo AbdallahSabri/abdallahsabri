@@ -2,16 +2,94 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
-import { defaultMetadata } from "@/lib/metadata";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { notFound } from "next/navigation";
+import JsonLd from "@/components/JsonLd";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
-export const metadata: Metadata = defaultMetadata;
+const EN_TITLE = "Abdallah Sabri — Senior Software Engineer & Founding Engineer";
+const EN_DESC =
+  "Senior Software Engineer available for freelance and remote work. Specialized in Next.js, Node.js, distributed systems, and SEO. Scaled platforms to 1M+ users.";
+
+const AR_TITLE = "عبدالله صبري — مهندس برمجيات أول ومؤسس تقني";
+const AR_DESC =
+  "مهندس برمجيات أول متاح للعمل الحر والوظائف عن بُعد. متخصص في Next.js وNode.js والأنظمة الموزعة وتحسين محركات البحث. أسّس منتجَين SaaS وقاد منصات وصلت لأكثر من مليون مستخدم.";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  const isAr = locale === "ar";
+
+  const title = isAr ? AR_TITLE : EN_TITLE;
+  const description = isAr ? AR_DESC : EN_DESC;
+  const canonical = `https://abdallahsabri.com/${locale}`;
+
+  return {
+    title,
+    description,
+    keywords: isAr
+      ? [
+          "عبدالله صبري",
+          "مهندس برمجيات أول",
+          "مهندس مؤسس",
+          "مهندس برمجيات للعمل الحر",
+          "متاح للعمل عن بُعد",
+          "SEO specialist",
+        ]
+      : [
+          "Abdallah Sabri",
+          "senior software engineer",
+          "founding engineer",
+          "freelance software engineer Next.js",
+          "freelance software engineer Node.js",
+          "team lead software engineer remote",
+          "software engineer available for hire",
+          "SEO specialist",
+        ],
+    authors: [{ name: "Abdallah Sabri", url: "https://abdallahsabri.com" }],
+    creator: "Abdallah Sabri",
+    alternates: {
+      canonical,
+      languages: {
+        en: "https://abdallahsabri.com/en",
+        ar: "https://abdallahsabri.com/ar",
+        "x-default": "https://abdallahsabri.com/en",
+      },
+    },
+    openGraph: {
+      type: "profile",
+      title,
+      description,
+      url: canonical,
+      siteName: "Abdallah Sabri",
+      locale: isAr ? "ar_AR" : "en_US",
+      alternateLocale: isAr ? "en_US" : "ar_AR",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
+    },
+  };
+}
 
 export default async function LocaleLayout({
   children,
@@ -35,6 +113,7 @@ export default async function LocaleLayout({
       className="scroll-smooth"
     >
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <JsonLd locale={locale} />
         <NextIntlClientProvider messages={messages}>
           {children}
         </NextIntlClientProvider>

@@ -1,10 +1,18 @@
 import { getTranslations } from "next-intl/server";
 import { siteConfig } from "@/lib/metadata";
+import { WhatsAppIcon, LinkedInIcon, InstagramIcon } from "@/components/ui/icons";
+import type { ComponentType } from "react";
 
 const socialHrefs = {
-  github: "https://github.com",
-  linkedin: "https://linkedin.com",
-  twitter: "https://twitter.com",
+  whatsapp: "https://wa.me/970592090780",
+  linkedin: "https://www.linkedin.com/in/abdallah-sabri/",
+  instagram: "https://www.instagram.com/abdallah_sabri/",
+};
+
+const socialIcons: Record<keyof typeof socialHrefs, ComponentType<{ className?: string }>> = {
+  whatsapp: WhatsAppIcon,
+  linkedin: LinkedInIcon,
+  instagram: InstagramIcon,
 };
 
 const navHrefs = {
@@ -22,7 +30,7 @@ export default async function Footer() {
   );
 
   const socialLinks = (Object.keys(socialHrefs) as Array<keyof typeof socialHrefs>).map(
-    (key) => ({ label: t(`social.${key}`), href: socialHrefs[key] })
+    (key) => ({ key, label: t(`social.${key}`), href: socialHrefs[key] })
   );
 
   return (
@@ -31,9 +39,9 @@ export default async function Footer() {
         <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
           <div>
             <a href="#hero" className="text-lg font-bold tracking-tight text-white">
-              AS<span className="text-indigo-400">.</span>
+              Abdallah Sabri
             </a>
-            <p className="mt-1 text-sm text-zinc-500">{siteConfig.description}</p>
+            {/*<p className="mt-1 text-sm text-zinc-500">{siteConfig.description}</p>*/}
           </div>
 
           <nav aria-label="Footer navigation">
@@ -49,18 +57,21 @@ export default async function Footer() {
           </nav>
 
           <div className="flex gap-4">
-            {socialLinks.map(({ label, href }) => (
-              <a
-                key={label}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-sm text-zinc-500 transition-colors hover:text-white"
-                aria-label={`${label} profile`}
-              >
-                {label}
-              </a>
-            ))}
+            {socialLinks.map(({ label, href, key }) => {
+              const Icon = socialIcons[key];
+              return (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-zinc-500 transition-colors hover:text-white"
+                  aria-label={`${label} profile`}
+                >
+                  <Icon className="h-5 w-5" />
+                </a>
+              );
+            })}
           </div>
         </div>
 

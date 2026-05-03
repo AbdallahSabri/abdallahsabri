@@ -17,9 +17,9 @@
   "Hero": {
     "badge": "Available for Work",
     "titlePart1": "Senior Software Engineer &",
-    "titleHighlight": "Engineering Leader",
-    "subtitle": "15+ years building cloud-native systems that scale — from government portals to SaaS products used in production worldwide.",
-    "description": "I architect distributed backends, lead cross-functional teams, and ship products that work in production — not just on whiteboards.",
+    "titleHighlight": "Founding Engineer",
+    "subtitle": "I've founded two SaaS products, and as a founding engineer at Safarway I lived the full journey from day zero to a platform serving 1M+ users, building fast, making smart technical bets, and owning outcomes, not just writing code.",
+    "description": "I love the journey that's still taking shape, when the picture isn't fully clear, the team is small, and every decision carries weight. I don't just write code, I contribute to building the product, the team, and the technical foundation from the ground up. I'm now looking for the next challenge with a team that has real ambition and is looking for someone to build alongside them and own the outcome fully.",
     "cta": "Hire Me",
     "ctaWork": "See My Work",
     "location": "📍 Ramallah, Palestine — Open to Remote Worldwide & Relocation",
@@ -36,18 +36,19 @@
     "headingPart1": "Engineer. Founder.",
     "headingHighlight": "Builder.",
     "paragraphs": [
-      "I'm Abdallah Sabri — a Senior Software Engineer with over 15 years of experience building backend systems, leading engineering teams, and turning complex problems into scalable, maintainable software.",
-      "My career has spanned government portals, travel tech, civic analytics, and healthcare SaaS. I've worked inside large enterprise environments and scrappy startup teams — and I've been on both sides of the table as an engineer and as a founder.",
-      "In late 2024, I launched Clincura, an AI-powered clinic management SaaS, and Level Feedback, a reputation management platform for small businesses. Building these products from zero has sharpened my instincts on system design, product decisions, and what actually matters when you're the one responsible for the outcome.",
-      "I'm based in Ramallah, Palestine, and actively looking for remote opportunities or roles that would allow me to relocate — particularly in Europe.",
-      "When I'm not building software, I'm investing in people — currently serving as President of Afaq Toastmasters Club, helping others grow their communication and leadership skills."
+      "I'm Abdallah Sabri, a Senior Full-Stack Engineer with over 15 years of experience building web systems, leading engineering teams, and turning complex problems into scalable, maintainable software.",
+      "My career has spanned government portals, travel tech, civic analytics, and healthcare SaaS. I've worked inside large enterprise environments and scrappy startup teams, and I've been on both sides of the table as an engineer and as a founder.",
+      "In late 2024, I launched Clincura, an AI-powered clinic management SaaS, and in May 2026, I launched Level Feedback, a reputation management platform for small businesses. Building these products from zero taught me something no job ever did: how to talk directly to users, understand what they actually need, and turn that into software that solves a real problem.",
+      "I'm based in Ramallah, Palestine, and actively looking for remote opportunities or roles that would allow me to relocate, particularly in Europe.",
+      "When I'm not building software, I'm investing in people. I currently serve as President of Afaq Toastmasters Club, helping others grow their communication and leadership skills. I also volunteer as Secretary and Board Member of Silwad Students Association, managing administrative operations, supporting university community initiatives, and making sure student voices are heard and acted upon."
     ],
     "stats": [
       { "value": "15+", "label": "Years of Engineering Experience" },
+      { "value": "1M+", "label": "Users Reached — Grew with Safarway from Day Zero as First Employee" },
       { "value": "2", "label": "SaaS Products Built & Launched" },
-      { "value": "97%", "label": "API Response Time Cut in Production (BFF layer, Ride With Via)" },
-      { "value": "5", "label": "Legacy Services Unified into One Platform (Zencity)" },
-      { "value": "8+", "label": "Years Remote Engineering" }
+      { "value": "8+", "label": "Years Remote Engineering" },
+      { "value": "97%", "label": "API Response Time Reduced as Part of BFF Migration to NestJS (Ride With Via)" },
+      { "value": "5", "label": "Legacy Notification Services Consolidated into One Unified System (Zencity)" }
     ]
   },
   "Services": {
@@ -98,7 +99,7 @@
         "role": "Founder & Architect",
         "period": "Dec 2024 – Present",
         "description": "An AI-powered clinic management SaaS platform built for multi-clinic operations. Handles scheduling, patient records, billing, and staff management — live with paying clients.",
-        "stack": ["NestJS", "TypeScript", "PostgreSQL", "RabbitMQ", "JWT/RBAC", "OpenAPI"],
+        "stack": ["React", "NestJS", "TypeScript", "PostgreSQL", "RabbitMQ", "Event Driven Architecture","JWT/RBAC", "OpenAPI", "AWS S3"],
         "tags": ["SaaS Product", "Healthcare Tech", "Founder"],
         "featured": true
       },
@@ -107,36 +108,36 @@
         "role": "Founder & Architect",
         "period": "Dec 2024 – Present",
         "description": "A platform automating Google Business Profile management and reputation monitoring for small businesses. Built with a focus on simplicity for non-technical SMB owners.",
-        "stack": ["Next.js", "Firebase", "Stripe", "Twilio", "QStash", "Vercel"],
+        "stack": ["Next.js", "Firebase", "Stripe", "Twilio", "RabbitMQ", "Event Driven Architecture","Vercel", "Claude API"],
         "tags": ["SaaS Product", "SMB", "Founder"],
         "featured": true
       },
       {
-        "title": "Ride With Via — BFF Layer",
-        "role": "Senior Engineer @ ASAL Technologies",
+        "title": "Ride With Via — Full-Stack Engineer",
+        "role": "Senior Software Engineer @ ASAL Technologies",
         "period": "2021 – 2023",
-        "description": "Designed and implemented a Backend For Frontend (BFF) architecture that reduced API response times from 1–2 minutes down to under 3 seconds — a 97% improvement. Supported 100,000+ active users across on-demand and pre-booking transit.",
-        "stack": ["Node.js", "Microservices", "REST APIs", "React.js", "Redux"],
-        "tags": ["Transit Tech", "Performance", "Scale"]
+        "description": "Worked as a full-stack engineer across multiple areas of a transit platform serving 100,000+ active users. Migrated the BFF layer to NestJS, reducing API response times by 97% — from 1–2 minutes down to under 3 seconds. Also built and maintained the Agent Management admin panel.",
+        "stack": ["Node.js", "NestJS", "REST APIs", "React.js", "Redux"],
+        "tags": ["Transit Tech", "Performance", "Full-Stack"]
       },
       {
-        "title": "Zencity — Unified Publication System",
-        "role": "Senior Engineer @ ASAL Technologies",
+        "title": "Zencity — Senior Software Engineer",
+        "role": "Senior Software Engineer @ ASAL Technologies",
         "period": "2023 – 2024",
-        "description": "Consolidated 5 legacy notification services into a single unified delivery system for email and in-app communications across 300+ government clients. Eliminated cross-service inconsistencies and reduced maintenance overhead.",
+        "description": "Contributed across multiple product areas for a GovTech platform serving 300+ government clients. Key projects included consolidating 5 legacy notification services into a unified delivery system, building a custom report builder, and contributing to core platform development.",
         "stack": ["Node.js", "TypeScript", "React.js", "Module Federation", "Storybook"],
-        "tags": ["GovTech", "Platform Engineering"]
+        "tags": ["GovTech", "Platform Engineering", "Full-Stack"]
       },
       {
-        "title": "Safarway — Microservices Migration",
-        "role": "Senior Engineer & Team Leader",
+        "title": "Safarway — From Day Zero",
+        "role": "First Employee · Senior Engineer · Team Leader",
         "period": "2018 – 2021",
-        "description": "Led the microservices migration for a global travel platform — scaling to ~1M users and 100,000+ property listings worldwide. Architected services for Social Engine, User Profiles, and Property Management.",
+        "description": "Joined as the first employee and became the founder's right hand — from finding the office and setting up infrastructure, to hiring and managing the engineering team. Lived the full journey from zero to a global travel platform serving ~1M users and 100,000+ property listings. Architected core services including Social Engine, User Profiles, and Property Management.",
         "stack": ["Node.js", "Microservices", "PostgreSQL", "MongoDB"],
-        "tags": ["Travel Tech", "Scale", "Team Lead"]
+        "tags": ["Travel Tech", "Scale", "Team Lead", "0→1", "First Employee"]
       },
       {
-        "title": "Ministry of Transport — Citizen Portal",
+        "title": "Ministry of Transport — Citizen Portal & e-services",
         "role": "Senior Software Engineer",
         "period": "2014 – 2018",
         "description": "Built the Palestinian Ministry of Transport's public-facing website and citizen portal. Integrated systems across multiple government ministries for unified data access and service delivery.",
@@ -172,9 +173,9 @@
         "period": "Mar 2021 – Dec 2024",
         "location": "Palestine (Remote)",
         "bullets": [
-          "Ride With Via (2021–2023): Designed BFF layer; cut API response times by 97%; supported 100K+ users.",
-          "Zencity (2023–2024): Consolidated 5 legacy services into a unified notification system for 300+ government clients; built drag-and-drop Report Builder with Module Federation; maintained shared Storybook component library.",
-          "Mentored 3 junior engineers through full onboarding — all 3 converted to full-time roles."
+          "Ride With Via (2021–2023): Worked on the existing BFF layer then led its migration to NestJS, reducing API response times by 97%; also built and maintained the Agent Management admin panel; supported 100K+ users.",
+          "Zencity (2023–2024): Consolidated 5 legacy notification services into a unified delivery system for 300+ government clients; contributed to the Report Builder and maintained the shared Storybook component library.",
+          "Mentored 3 junior engineers at ASAL Technologies — all 3 landed full-time roles outside the company."
         ]
       },
       {
@@ -185,10 +186,10 @@
         "period": "Jun 2018 – Feb 2021",
         "location": "Palestine",
         "bullets": [
-          "Defined technical roadmap with founders and delivered first working POC.",
-          "Led microservices migration and scaled platform to ~1M users and 100,000+ property listings.",
-          "Built 'Operation Manager' — internal logistics tool for 100,000+ global properties.",
-          "Grew and led a 5-person engineering team."
+          "Joined as the first employee and worked closely with the founder from day zero — from setting up the office to shaping the technical direction of the product.",
+          "Built the initial system as a monolithic application, then led the engineering team through the migration to microservices once the team and infrastructure were ready.",
+          "Built the Operation Manager — an internal logistics tool used to manage 100,000+ global properties.",
+          "Hired, grew, and led a 5-person engineering team throughout the company's journey from zero to ~1M users."
         ]
       },
       {
@@ -253,7 +254,7 @@
       {
         "imageAlt": "Silwad Students Association (Afaq)",
         "org": "Silwad Students Association (Afaq)",
-        "role": "Secretary",
+        "role": "Secretary & Board Member",
         "period": "Jul 2024 – Jul 2026",
         "description": "Managing administrative operations and communications for the student association. Supporting university community initiatives and student affairs — ensuring the association runs efficiently and that student voices are heard and acted upon."
       }
@@ -313,6 +314,9 @@
       "contactMethod": "Preferred contact method",
       "methods": ["Email", "WhatsApp", "Phone Call"],
       "submit": "Send Message",
+      "submitting": "Sending…",
+      "successMessage": "Message sent! I'll get back to you soon.",
+      "errorMessage": "Something went wrong. Please try again or reach out directly.",
       "responseNote": "I typically respond within 24–48 hours. For urgent enquiries,",
       "responseNoteWhatsApp": "WhatsApp",
       "responseNoteEnd": "is the fastest way to reach me."
@@ -328,6 +332,8 @@
     "social": {
       "github": "GitHub",
       "linkedin": "LinkedIn",
+      "instagram": "Instagram",
+      "whatsapp": "Whatsapp",
       "twitter": "Twitter"
     },
     "copyright": "© {year} {name}. All rights reserved."
