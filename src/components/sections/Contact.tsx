@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { useState } from "react";
 import SectionLabel from "@/components/ui/SectionLabel";
 import {WhatsAppIcon, LinkedInIcon, GoogleMeetIcon} from "@/components/ui/icons";
 
@@ -16,6 +17,8 @@ const inputClass =
 
 const labelClass = "mb-1.5 block text-sm text-zinc-400";
 
+type Status = "idle" | "loading" | "success" | "error";
+
 export default function Contact() {
   const t = useTranslations("Contact");
   const contactItems = t.raw("contactItems") as Array<{
@@ -23,6 +26,37 @@ export default function Contact() {
     display: string;
   }>;
   const methods = t.raw("form.methods") as string[];
+
+  const [status, setStatus] = useState<Status>("idle");
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setStatus("loading");
+
+    const form = e.currentTarget;
+    const data = {
+      fullName: (form.elements.namedItem("full-name") as HTMLInputElement).value,
+      email: (form.elements.namedItem("email") as HTMLInputElement).value,
+      company: (form.elements.namedItem("company") as HTMLInputElement).value,
+      topic: (form.elements.namedItem("topic") as HTMLSelectElement).value,
+      message: (form.elements.namedItem("message") as HTMLTextAreaElement).value,
+      contactMethod: (form.querySelector('input[name="contact-method"]:checked') as HTMLInputElement | null)?.value ?? "",
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      if (!res.ok) throw new Error();
+      setStatus("success");
+      form.reset();
+    } catch {
+      setStatus("error");
+    }
+  }
 
   return (
     <section
@@ -88,7 +122,7 @@ export default function Contact() {
           {/* Right: Intake form */}
           <form
             className="space-y-5"
-            onSubmit={(e) => e.preventDefault()}
+            onSubmit={handleSubmit}
             noValidate
           >
             <div className="grid gap-4 sm:grid-cols-2">
@@ -189,10 +223,18 @@ export default function Contact() {
 
             <button
               type="submit"
-              className="w-full rounded-xl bg-indigo-500 py-3.5 font-medium text-white transition-colors hover:bg-indigo-600"
+              disabled={status === "loading"}
+              className="w-full rounded-xl bg-indigo-500 py-3.5 font-medium text-white transition-colors hover:bg-indigo-600 disabled:cursor-not-allowed disabled:opacity-60"
             >
-              {t("form.submit")}
+              {status === "loading" ? t("form.submitting") : t("form.submit")}
             </button>
+
+            {status === "success" && (
+              <p className="text-center text-sm text-emerald-400">{t("form.successMessage")}</p>
+            )}
+            {status === "error" && (
+              <p className="text-center text-sm text-red-400">{t("form.errorMessage")}</p>
+            )}
 
             <p className="text-center text-xs text-zinc-600">
               {t("form.responseNote")}{" "}

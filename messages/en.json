@@ -313,6 +313,9 @@
       "contactMethod": "Preferred contact method",
       "methods": ["Email", "WhatsApp", "Phone Call"],
       "submit": "Send Message",
+      "submitting": "Sending…",
+      "successMessage": "Message sent! I'll get back to you soon.",
+      "errorMessage": "Something went wrong. Please try again or reach out directly.",
       "responseNote": "I typically respond within 24–48 hours. For urgent enquiries,",
       "responseNoteWhatsApp": "WhatsApp",
       "responseNoteEnd": "is the fastest way to reach me."
