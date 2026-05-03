@@ -3,8 +3,8 @@ import { getTranslations } from "next-intl/server";
 import SectionLabel from "@/components/ui/SectionLabel";
 
 const cardImages = [
-  { src: "/volunteering/afaq-toastmasters.jpg", icon: "🎤" },
-  { src: "/volunteering/afaq-students.jpg", icon: "🎓" },
+  { src: "https://s3.eu-central-1.amazonaws.com/abdallahsabri.com/abdallah00001.jpg", icon: "🎤" },
+  { src: "https://s3.eu-central-1.amazonaws.com/abdallahsabri.com/abdallah00008.JPG", icon: "🎓" },
 ];
 
 function ImageSlot({ src, alt }: { src: string; alt: string }) {

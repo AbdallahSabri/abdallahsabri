@@ -251,8 +251,8 @@
         "description": "Leading the club's operations, weekly meetings, and member development programs with a focus on public speaking and leadership development. Responsible for setting the club's strategic direction and fostering an environment where members build communication confidence."
       },
       {
-        "imageAlt": "Afaq University Students Association",
-        "org": "Afaq University Students Association",
+        "imageAlt": "Silwad Students Association (Afaq)",
+        "org": "Silwad Students Association (Afaq)",
         "role": "Secretary",
         "period": "Jul 2024 – Jul 2026",
         "description": "Managing administrative operations and communications for the student association. Supporting university community initiatives and student affairs — ensuring the association runs efficiently and that student voices are heard and acted upon."
@@ -289,10 +289,8 @@
     "description": "Whether you're looking to hire, collaborate, or explore a consulting engagement — I'd love to hear what you're working on.",
     "detailsHeading": "Contact Details",
     "contactItems": [
-      { "label": "Email", "display": "abdallah.silwad@gmail.com" },
-      { "label": "Phone — MENA", "display": "+970 592 090 780" },
-      { "label": "WhatsApp — MENA", "display": "+970 592 090 780" },
-      { "label": "Phone — Outside MENA", "display": "+1 225 446 5588" },
+      { "label": "Email", "display": "info@abdallahsabri.com" },
+      { "label": "1 Hour Consultation", "display": "calendly.com/abdallah-sabri" },
       { "label": "LinkedIn", "display": "linkedin.com/in/abdallah-sabri" },
       { "label": "Location", "display": "Ramallah, Palestine — Open to Remote Worldwide & Relocation" }
     ],
