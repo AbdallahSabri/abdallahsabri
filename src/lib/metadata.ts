@@ -6,7 +6,7 @@ export const siteConfig = {
   description:
     "Full-stack developer specializing in modern web applications. Building fast, scalable, and beautiful digital experiences.",
   url: "https://abdallahsabri.com",
-  ogImage: "/og-image.png",
+  ogImage: "/og-image.jpg",
   twitterHandle: "@abdallahsabri",
 };
 
