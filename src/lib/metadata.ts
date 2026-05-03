@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 export const siteConfig = {
   name: "Abdallah Sabri",
-  title: "Abdallah Sabri — Full-Stack Engineer",
+  title: "Abdallah Sabri — Senior Software Engineer & Founding Engineer",
   description:
     "Full-stack developer specializing in modern web applications. Building fast, scalable, and beautiful digital experiences.",
   url: "https://abdallahsabri.com",
@@ -18,12 +18,21 @@ export const defaultMetadata: Metadata = {
   },
   description: siteConfig.description,
   keywords: [
+    "Abdallah Sabri",
+    "senior software engineer",
+    "founding engineer",
+    "freelance software engineer Next.js",
+    "freelance software engineer Node.js",
+    "team lead software engineer remote",
+    "software engineer available for hire",
+    "SEO specialist",
     "full-stack developer",
-    "web developer",
     "React",
     "Next.js",
+    "Node.js",
     "TypeScript",
-    "software engineer",
+    "Web Developer",
+    "Software Engineer",
   ],
   authors: [{ name: siteConfig.name, url: siteConfig.url }],
   creator: siteConfig.name,
