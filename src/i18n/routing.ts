@@ -4,6 +4,7 @@ import { createNavigation } from "next-intl/navigation";
 export const routing = defineRouting({
   locales: ["en", "ar"],
   defaultLocale: "en",
+  localeCookie: false,
 });
 
 export const { Link, redirect, usePathname, useRouter } =
