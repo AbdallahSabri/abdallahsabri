@@ -1,10 +1,10 @@
-import { getTranslations } from "next-intl/server";
+import { getTranslations, getLocale } from "next-intl/server";
 
 const statValues = ["15+", "2", "97%", "8+"];
 const statKeys = ["experience", "saas", "latency", "remote"] as const;
 
 export default async function Hero() {
-  const t = await getTranslations("Hero");
+  const [t, locale] = await Promise.all([getTranslations("Hero"), getLocale()]);
 
   const stats = statValues.map((value, i) => ({
     value,
@@ -25,6 +25,9 @@ export default async function Hero() {
           </p>
 
           <h1 className="mb-5 text-4xl font-bold leading-tight tracking-tight text-white md:text-5xl lg:text-[3.25rem]">
+            <span className="mb-2 block text-2xl font-medium text-zinc-300">
+              {locale === "ar" ? "عبدالله صبري" : "Abdallah Sabri"}
+            </span>
             {t("titlePart1")}{" "}
             <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
               {t("titleHighlight")}
@@ -66,7 +69,11 @@ export default async function Hero() {
               <div className="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full blur-[90px] bg-[#7B61FF]/50" />
               <img
                 src="https://s3.eu-central-1.amazonaws.com/abdallahsabri.com/abdallah00023.png"
-                alt="Abdallah Sabri"
+                alt={
+                  locale === "ar"
+                    ? "عبدالله صبري — مهندس برمجيات أول ومؤسس تقني"
+                    : "Abdallah Sabri — Senior Software Engineer and Founding Engineer"
+                }
                 className="relative z-10 h-80 w-auto max-w-none object-contain object-bottom "
               />
             </div>
