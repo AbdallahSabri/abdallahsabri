@@ -2,12 +2,11 @@
 
 import { useTranslations } from "next-intl";
 import SectionLabel from "@/components/ui/SectionLabel";
+import {WhatsAppIcon, LinkedInIcon, GoogleMeetIcon} from "@/components/ui/icons";
 
 const contactHrefs = [
-  "mailto:abdallah.silwad@gmail.com",
-  "tel:+970592090780",
-  "https://wa.me/970592090780",
-  "tel:+12254465588",
+  "mailto:info@abdallahsabri.com",
+  "https://calendly.com/abdallah-sabri",
   "https://linkedin.com/in/abdallah-sabri",
   null,
 ];
@@ -54,10 +53,15 @@ export default function Contact() {
             <ul className="space-y-4">
               {contactItems.map(({ label, display }, i) => {
                 const href = contactHrefs[i];
-                const icons = ["📧", "📞", "💬", "📞", "🔗", "📍"];
+                const icons = [
+                  "📧",
+                  <GoogleMeetIcon key="whatsapp" className="h-4 w-4 text-[#25D366]" />,
+                  <LinkedInIcon key="linkedin" className="h-4 w-4 text-[#0A66C2]" />,
+                  "📍",
+                ];
                 return (
                   <li key={label} className="flex items-start gap-3">
-                    <span className="mt-0.5 text-base" aria-hidden="true">
+                    <span className="mt-0.5 flex items-center text-base" aria-hidden="true">
                       {icons[i]}
                     </span>
                     <div>
