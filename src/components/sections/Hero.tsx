@@ -1,7 +1,7 @@
 import { getTranslations, getLocale } from "next-intl/server";
 
-const statValues = ["15+", "2", "97%", "8+"];
-const statKeys = ["experience", "saas", "latency", "remote"] as const;
+const statValues = ["15+", "2",  "8+"];
+const statKeys = ["experience", "saas", "remote"] as const;
 
 export default async function Hero() {
   const [t, locale] = await Promise.all([getTranslations("Hero"), getLocale()]);
@@ -68,7 +68,7 @@ export default async function Hero() {
               {/* Purple radial glow behind subject */}
               <div className="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full blur-[90px] bg-[#7B61FF]/50" />
               <img
-                src="https://s3.eu-central-1.amazonaws.com/abdallahsabri.com/abdallah00023.png"
+                src="https://s3.eu-central-1.amazonaws.com/abdallahsabri.com/abdallah00029.png"
                 alt={
                   locale === "ar"
                     ? "عبدالله صبري — مهندس برمجيات أول ومؤسس تقني"
@@ -79,7 +79,7 @@ export default async function Hero() {
             </div>
 
             {/* Metric cards */}
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-3 gap-3">
               {stats.map((stat) => (
                 <div
                   key={stat.label}

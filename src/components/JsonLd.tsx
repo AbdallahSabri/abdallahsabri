@@ -10,6 +10,8 @@ const AR_DESCRIPTION =
   "أُصمّم أنظمة خوادم موزعة، وأقود فرقًا متعددة التخصصات، وأُطلق منتجات من الفكرة حتى الإنتاج. أسّست منتجَين SaaS وتوسّعت بمنصات لتخدم أكثر من مليون مستخدم، وتولّيت أدوار المهندس المؤسِّس حيث المهمة هي البناء بسرعة واتخاذ رهانات تقنية ذكية.";
 
 export default function JsonLd({ locale }: { locale: string }) {
+  if (process.env.NODE_ENV !== "production") return null;
+
   const isAr = locale === "ar";
   const url = `${BASE_URL}/${locale}`;
 
