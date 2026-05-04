@@ -77,4 +77,12 @@ export const defaultMetadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  alternates: {
+    canonical: 'https://abdallahsabri.com/en',
+    languages: {
+      'en-US': 'https://abdallahsabri.com/en',
+      'ar-SA': 'https://abdallahsabri.com/ar',
+      'x-default': 'https://abdallahsabri.com/en', // fallback
+    },
+  },
 };

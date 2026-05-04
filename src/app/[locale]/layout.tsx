@@ -1,28 +1,25 @@
-import type { Metadata } from "next";
-import type { ReactNode } from "react";
-import { Geist, Geist_Mono } from "next/font/google";
+import type {Metadata} from "next";
+import type {ReactNode} from "react";
+import {Geist, Geist_Mono} from "next/font/google";
 import "../globals.css";
-import { NextIntlClientProvider } from "next-intl";
-import { routing } from "@/i18n/routing";
-import { notFound } from "next/navigation";
+import {NextIntlClientProvider} from "next-intl";
+import {routing} from "@/i18n/routing";
+import {notFound} from "next/navigation";
 import JsonLd from "@/components/JsonLd";
 
-const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
-const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
+const geistSans = Geist({variable: "--font-geist-sans", subsets: ["latin"]});
+const geistMono = Geist_Mono({variable: "--font-geist-mono", subsets: ["latin"]});
 
-const EN_TITLE = "Abdallah Sabri — Senior Software Engineer & Founding Engineer";
-const EN_DESC =
-  "Senior Software Engineer available for freelance and remote work. Specialized in Next.js, Node.js, distributed systems, and SEO. Scaled platforms to 1M+ users.";
+const EN_TITLE = "Abdallah Sabri — Senior Software Engineer & Founder";
+const EN_DESC = "Senior Software Engineer for freelance & remote work. Expert in Next.js, Node.js, distributed systems & SEO. Scaled to 1M+ users.";
+const AR_TITLE = "عبدالله صبري — مهندس برمجيات ومؤسس تقني";
+const AR_DESC = "مهندس برمجيات أول للعمل الحر والعمل عن بُعد. متخصص في Next.js وNode.js والأنظمة الموزعة وSEO. أسّس منتجَين SaaS ووصل لمليون مستخدم.";
 
-const AR_TITLE = "عبدالله صبري — مهندس برمجيات أول ومؤسس تقني";
-const AR_DESC =
-  "مهندس برمجيات أول متاح للعمل الحر والوظائف عن بُعد. متخصص في Next.js وNode.js والأنظمة الموزعة وتحسين محركات البحث. أسّس منتجَين SaaS وقاد منصات وصلت لأكثر من مليون مستخدم.";
-
-export async function generateMetadata({
-  params,
-}: {
+interface GenerateMetadataProps {
   params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
+}
+
+export async function generateMetadata({ params }: GenerateMetadataProps): Promise<Metadata> {
   const { locale } = await params;
   const isAr = locale === "ar";
 
@@ -35,24 +32,24 @@ export async function generateMetadata({
     description,
     keywords: isAr
       ? [
-          "عبدالله صبري",
-          "مهندس برمجيات أول",
-          "مهندس مؤسس",
-          "مهندس برمجيات للعمل الحر",
-          "متاح للعمل عن بُعد",
-          "SEO specialist",
-        ]
+        "عبدالله صبري",
+        "مهندس برمجيات أول",
+        "مهندس مؤسس",
+        "مهندس برمجيات للعمل الحر",
+        "متاح للعمل عن بُعد",
+        "SEO specialist",
+      ]
       : [
-          "Abdallah Sabri",
-          "senior software engineer",
-          "founding engineer",
-          "freelance software engineer Next.js",
-          "freelance software engineer Node.js",
-          "team lead software engineer remote",
-          "software engineer available for hire",
-          "SEO specialist",
-        ],
-    authors: [{ name: "Abdallah Sabri", url: "https://abdallahsabri.com" }],
+        "Abdallah Sabri",
+        "senior software engineer",
+        "founding engineer",
+        "freelance software engineer Next.js",
+        "freelance software engineer Node.js",
+        "team lead software engineer remote",
+        "software engineer available for hire",
+        "SEO specialist",
+      ],
+    authors: [{name: "Abdallah Sabri", url: "https://abdallahsabri.com"}],
     creator: "Abdallah Sabri",
     alternates: {
       canonical,
@@ -108,17 +105,17 @@ export async function generateMetadata({
 }
 
 export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
+  return routing.locales.map((locale) => ({locale}));
 }
 
 export default async function LocaleLayout({
-  children,
-  params,
-}: {
+                                             children,
+                                             params,
+                                           }: {
   children: ReactNode;
   params: Promise<{ locale: string }>;
 }) {
-  const { locale } = await params;
+  const {locale} = await params;
 
   if (!routing.locales.includes(locale as "en" | "ar")) {
     notFound();
@@ -132,12 +129,12 @@ export default async function LocaleLayout({
       dir={locale === "ar" ? "rtl" : "ltr"}
       className="scroll-smooth"
     >
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <JsonLd locale={locale} />
-        <NextIntlClientProvider messages={messages}>
-          {children}
-        </NextIntlClientProvider>
-      </body>
+    <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+    <JsonLd locale={locale}/>
+    <NextIntlClientProvider messages={messages}>
+      {children}
+    </NextIntlClientProvider>
+    </body>
     </html>
   );
 }
