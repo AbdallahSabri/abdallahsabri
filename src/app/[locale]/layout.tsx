@@ -69,7 +69,7 @@ export async function generateMetadata({ params }: GenerateMetadataProps): Promi
       alternateLocale: isAr ? "en_US" : "ar_AR",
       images: [
         {
-          url: "https://abdallahsabri.com/og-image.jpg",
+          url: "https://abdallahsabri.com/og-image.png",
           width: 1200,
           height: 630,
           alt: title,
@@ -83,7 +83,7 @@ export async function generateMetadata({ params }: GenerateMetadataProps): Promi
       creator: "@abdallahsabri",
       images: [
         {
-          url: "https://abdallahsabri.com/og-image.jpg",
+          url: "https://abdallahsabri.com/og-image.png",
           width: 1200,
           height: 630,
           alt: title,
