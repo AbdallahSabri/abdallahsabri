@@ -8,6 +8,7 @@ import Footer from "@/components/sections/Footer";
 import ScrollToTop from "@/components/ui/ScrollToTop";
 import { Link } from "@/i18n/routing";
 import { getAllPosts, getPostBySlug } from "@/lib/blog";
+import AuthorBio from "@/components/ui/AuthorBio";
 import { getBlogSchemas } from "./seo";
 
 type Props = { params: Promise<{ slug: string }> };
@@ -139,6 +140,7 @@ export default async function BlogPostPage({ params }: Props) {
                 }}
               />
             </div>
+            <AuthorBio />
           </div>
         </article>
       </main>

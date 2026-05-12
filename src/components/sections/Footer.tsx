@@ -16,10 +16,10 @@ const socialIcons: Record<keyof typeof socialHrefs, ComponentType<{ className?: 
 };
 
 const navHrefs = {
-  about: "#about",
-  services: "#services",
-  work: "#work",
-  contact: "#contact",
+  blog: "/blog",
+  projects: "/projects",
+  faq: "/faq",
+  about: "/about",
 };
 
 export default async function Footer() {

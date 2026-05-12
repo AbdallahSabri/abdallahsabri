@@ -532,10 +532,11 @@
   },
   "Footer": {
     "nav": {
-      "about": "حول",
-      "services": "الخدمات",
-      "work": "الأعمال",
-      "contact": "تواصل"
+      "blog": "المدونة",
+      "products": "المنتجات",
+      "faq": "الأسئلة الشائعة",
+      "projects": "المشاريع",
+      "about": "حول"
     },
     "social": {
       "github": "GitHub",

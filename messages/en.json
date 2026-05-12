@@ -532,10 +532,11 @@
   },
   "Footer": {
     "nav": {
-      "about": "About",
-      "services": "Services",
-      "work": "Work",
-      "contact": "Contact"
+      "blog": "Blog",
+      "products": "Products",
+      "faq": "FAQ",
+      "projects": "Projects",
+      "about": "About"
     },
     "social": {
       "github": "GitHub",
