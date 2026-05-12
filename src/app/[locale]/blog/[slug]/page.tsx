@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       publishedTime: post.date,
       images: [
         {
-          url: post.image ?? "https://s3.eu-central-1.amazonaws.com/abdallahsabri.com/abdallah00029.png",
+          url: post.image ?? "https://s3.eu-central-1.amazonaws.com/abdallahsabri.com/images/abdallah00029.png",
           width: 1200,
           height: 630,
           alt: post.title,
@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title: post.title,
       description: post.excerpt,
-      images: [post.image ?? "https://s3.eu-central-1.amazonaws.com/abdallahsabri.com/abdallah00029.png"],
+      images: [post.image ?? "https://s3.eu-central-1.amazonaws.com/abdallahsabri.com/images/abdallah00029.png"],
     },
     alternates: {
       canonical: `https://abdallahsabri.com/en/blog/${slug}`,

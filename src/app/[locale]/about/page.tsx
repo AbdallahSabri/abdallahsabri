@@ -60,7 +60,7 @@ export default async function AboutPage() {
           }}
         >
           <Image
-            src="https://s3.eu-central-1.amazonaws.com/abdallahsabri.com/abdallah00008.JPG"
+            src="https://s3.eu-central-1.amazonaws.com/abdallahsabri.com/images/abdallah00008.JPG"
             alt="Profile"
             width={500}
             height={600}

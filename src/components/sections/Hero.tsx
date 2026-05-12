@@ -68,7 +68,7 @@ export default async function Hero() {
               {/* Purple radial glow behind subject */}
               <div className="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full blur-[90px] bg-[#7B61FF]/50" />
               <img
-                src="https://s3.eu-central-1.amazonaws.com/abdallahsabri.com/abdallah00029.png"
+                src="https://s3.eu-central-1.amazonaws.com/abdallahsabri.com/images/abdallah00029.png"
                 alt={
                   locale === "ar"
                     ? "عبدالله صبري — مهندس برمجيات أول ومؤسس تقني"
