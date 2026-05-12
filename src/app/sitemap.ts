@@ -1,9 +1,11 @@
 import type { MetadataRoute } from "next";
+import { getAllPosts } from "@/lib/blog";
 
 const BASE_URL = "https://abdallahsabri.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
+  const posts = getAllPosts();
 
   return [
     {
@@ -116,5 +118,35 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
       },
     },
+    {
+      url: `${BASE_URL}/en/blog`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.8,
+      alternates: { languages: { ar: `${BASE_URL}/ar/blog` } },
+    },
+    {
+      url: `${BASE_URL}/ar/blog`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.8,
+      alternates: { languages: { en: `${BASE_URL}/en/blog` } },
+    },
+    ...posts.flatMap((post) => [
+      {
+        url: `${BASE_URL}/en/blog/${post.slug}`,
+        lastModified: new Date(post.date),
+        changeFrequency: "monthly" as const,
+        priority: 0.7,
+        alternates: { languages: { ar: `${BASE_URL}/ar/blog/${post.slug}` } },
+      },
+      {
+        url: `${BASE_URL}/ar/blog/${post.slug}`,
+        lastModified: new Date(post.date),
+        changeFrequency: "monthly" as const,
+        priority: 0.7,
+        alternates: { languages: { en: `${BASE_URL}/en/blog/${post.slug}` } },
+      },
+    ]),
   ];
 }

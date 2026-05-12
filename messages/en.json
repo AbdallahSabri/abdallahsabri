@@ -487,5 +487,12 @@
       ]
     },
     "cta": { "visitLabel": "Visit Level Feedback", "backLabel": "← All Projects" }
+  },
+  "Blog": {
+    "label": "Blog",
+    "heading": "Blog",
+    "description": "Thoughts on engineering, product, and building.",
+    "readArticle": "Read article",
+    "empty": "No posts yet. Check back soon."
   }
 }

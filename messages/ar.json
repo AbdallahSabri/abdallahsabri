@@ -487,5 +487,12 @@
       ]
     },
     "cta": { "visitLabel": "زر Level Feedback", "backLabel": "← جميع المشاريع" }
+  },
+  "Blog": {
+    "label": "المدونة",
+    "heading": "المدونة",
+    "description": "أفكار حول الهندسة والمنتجات والبناء.",
+    "readArticle": "اقرأ المقال",
+    "empty": "لا توجد مقالات بعد. تابعنا قريباً."
   }
 }

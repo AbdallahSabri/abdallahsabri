@@ -61,7 +61,7 @@ Deployed to Vercel. Use the standard Vercel CLI or GitHub-based CI/CD for deploy
 
 ## Planning
 
-When requesting planning for any task or feature, Claude will create a plan file in the `PLANS/` folder using the naming format: `TIMESTAMP_PLAN_NAME.md` (e.g., `202605121530_redesign_hero.md`). Timestamps are in `YYYYMMDDHHMM` format.
+When requesting planning for any task or feature, Claude will create a plan file in the `PLANS/` folder using the naming format: `TIMESTAMP_PLAN_NAME.md` (e.g., `051220261530_redesign_hero.md`). Timestamps are in `MMDDYYYYHHMM` format.
 
 ## Related Documentation
 
