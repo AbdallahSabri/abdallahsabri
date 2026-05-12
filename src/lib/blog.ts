@@ -9,6 +9,7 @@ export type BlogPostMeta = {
   excerpt: string;
   tags: string[];
   readTime: string;
+  image?: string;
 };
 
 export type BlogPost = BlogPostMeta & { content: string };

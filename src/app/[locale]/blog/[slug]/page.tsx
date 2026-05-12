@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import rehypePrettyCode from "rehype-pretty-code";
+import Image from "next/image";
 import Navbar from "@/components/sections/Navbar";
 import Footer from "@/components/sections/Footer";
 import ScrollToTop from "@/components/ui/ScrollToTop";
@@ -31,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       publishedTime: post.date,
       images: [
         {
-          url: "https://abdallahsabri.com/og-image.png",
+          url: post.image ?? "https://s3.eu-central-1.amazonaws.com/abdallahsabri.com/abdallah00029.png",
           width: 1200,
           height: 630,
           alt: post.title,
@@ -42,6 +43,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title: post.title,
       description: post.excerpt,
+      images: [post.image ?? "https://s3.eu-central-1.amazonaws.com/abdallahsabri.com/abdallah00029.png"],
     },
     alternates: {
       canonical: `https://abdallahsabri.com/en/blog/${slug}`,
@@ -112,6 +114,18 @@ export default async function BlogPostPage({ params }: Props) {
                 <span>·</span>
                 <span>{post.readTime}</span>
               </div>
+              {post.image && (
+                <div className="mt-8 overflow-hidden rounded-xl">
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    width={1200}
+                    height={630}
+                    className="w-full object-cover"
+                    priority
+                  />
+                </div>
+              )}
             </header>
 
             <div className="prose prose-invert prose-zinc max-w-none prose-headings:font-semibold prose-headings:text-white prose-h2:mt-10 prose-h2:text-2xl prose-h3:text-xl prose-p:text-zinc-300 prose-p:leading-relaxed prose-a:text-indigo-400 prose-a:no-underline hover:prose-a:text-indigo-300 prose-strong:text-white prose-code:rounded prose-code:bg-zinc-800 prose-code:px-1.5 prose-code:py-0.5 prose-code:text-zinc-200 prose-code:before:content-none prose-code:after:content-none prose-pre:border prose-pre:border-white/5 prose-pre:bg-[#18181b] prose-li:text-zinc-300 prose-hr:border-white/10">

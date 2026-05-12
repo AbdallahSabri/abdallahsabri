@@ -4,11 +4,12 @@ date: "2026-05-12"
 excerpt: "How I quit my government job to build a tourism startup, and why we spent 4-5 months rebuilding everything we'd already built."
 tags: ["Startups", "Architecture", "Microservices", "Node.js", "Learning"]
 readTime: "7 min read"
+author: "Abdallah Sabri"
+description: "What I learned leading a full monolith-to-microservices rewrite at Safarway — from 11-hour days and zero CI/CD knowledge to a system that hit 1M downloads."
+image: "https://s3.eu-central-1.amazonaws.com/abdallahsabri.com/blog/monolith-microservices.jpg"
 ---
 
-In 2018, I quit my government job. I was doing freelance work with Laravel, Vue, and WordPress. I had stable paychecks and predictable days. Then I joined a startup that had no name, no office, and no users.
-
-It was terrifying.
+In 2018, I quit my government job to join a tourism startup with no name, no office, and no users. What followed was a full monolith-to-microservices rewrite mid-product — and I still don't know if it was the right call. It was terrifying.
 
 ## How It Started
 
@@ -66,6 +67,13 @@ We had an expert to guide us. Most startups don't. We had time and money to spen
 
 If I could tell 2018 me anything: start simple. Understand your business first. Pick fancy architecture when the business needs it, not because it sounds cool.
 
+## Key Takeaways
+
+- Hiring someone who owns infrastructure will shape your entire architecture — the technology is just what they already know.
+- Rebuilding a working monolith as microservices costs 4–5 months before you've validated a single product assumption.
+- Before splitting services, your team needs concrete answers: who owns which database, how do services communicate, and how do you deploy them independently.
+- Microservices earn their complexity only when one part needs to scale independently, teams are blocking each other in the same codebase, or a single deploy breaks unrelated features.
+
 ## After
 
 I left Safarway in 2021. I wanted to try something new. I wanted to build with a remote team.
@@ -73,3 +81,9 @@ I left Safarway in 2021. I wanted to try something new. I wanted to build with a
 The microservices thing was one of the most intense things I've done. I also don't know if it was the right call at the time. But it helped me later when I worked with Asal Technologies.
 
 The best lessons are the ones you question and then use anyway.
+
+## Continue Reading
+
+- [How I approach engineering and new teams](/about)
+- [Projects I've shipped since Safarway](/projects)
+- [More posts on architecture and engineering decisions](/blog)

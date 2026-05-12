@@ -28,7 +28,7 @@ export function getBlogSchemas(post: BlogPostMeta) {
     datePublished: post.date,
     keywords: post.tags.join(", "),
     author: { "@id": `${BASE}#person` },
-    image: `${BASE}/og-image.png`,
+    image: post.image ?? `${BASE}/og-image.png`,
   };
 
   return { breadcrumbSchema, articleSchema };
