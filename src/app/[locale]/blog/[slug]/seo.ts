@@ -25,7 +25,7 @@ export function getBlogSchemas(post: BlogPostMeta) {
     headline: post.title,
     description: post.excerpt,
     url: `${BASE}/blog/${post.slug}`,
-    datePublished: post.date,
+    datePublished: new Date(post.date).toISOString(),
     keywords: post.tags.join(", "),
     author: { "@id": `${BASE}#person` },
     image: post.image ?? `${BASE}/og-image.png`,
