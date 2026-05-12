@@ -5,7 +5,7 @@ import Navbar from "@/components/sections/Navbar";
 import Footer from "@/components/sections/Footer";
 import ScrollToTop from "@/components/ui/ScrollToTop";
 import FAQ from "@/components/sections/FAQ";
-import { getFAQSchema } from "./seo";
+import { getFAQSchema, breadcrumbSchema } from "./seo";
 import enItems from "../../../../content/faq/en.json";
 import arItems from "../../../../content/faq/ar.json";
 
@@ -45,6 +45,10 @@ export default async function FAQPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <Navbar />
       <main>
