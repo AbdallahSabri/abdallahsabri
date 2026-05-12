@@ -23,6 +23,7 @@ export default function Navbar() {
     { label: t("links.services"), href: "#services", type: "anchor" },
     { label: t("links.work"), href: "#work", type: "anchor" },
     { label: t("links.projects"), href: "/projects", type: "page" },
+    { label: t("links.faq"), href: "/faq", type: "page" },
     { label: t("links.experience"), href: "#experience", type: "anchor" },
     { label: t("links.skills"), href: "#skills", type: "anchor" },
     { label: t("links.volunteering"), href: "#volunteering", type: "anchor" },

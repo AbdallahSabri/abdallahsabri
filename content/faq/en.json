@@ -1,0 +1,72 @@
+[
+  {
+    "id": "who-is-abdallah-sabri",
+    "question": "Who is Abdallah Sabri?",
+    "answer": "Abdallah Sabri is a Senior Software Engineer based in Ramallah, Palestine, with 15+ years of experience building distributed systems in Node.js, TypeScript, and AWS. He has led engineering teams, architected microservices at scale, and founded two SaaS products: Clincura and Level Feedback."
+  },
+  {
+    "id": "tech-stack",
+    "question": "What is Abdallah Sabri's tech stack?",
+    "answer": "Abdallah's core stack is Node.js, TypeScript, NestJS, and AWS. On the database side he works with PostgreSQL, MongoDB, DynamoDB, and Redis. For frontend he uses React.js and Next.js. He has deep experience with microservices, event-driven architecture, Docker, and CI/CD pipelines."
+  },
+  {
+    "id": "remote-availability",
+    "question": "Is Abdallah Sabri available for remote work?",
+    "answer": "Yes. Abdallah is actively looking for remote opportunities with product startups, scale-ups, and agencies. He is also open to relocation, particularly to Europe."
+  },
+  {
+    "id": "location",
+    "question": "Where is Abdallah Sabri based?",
+    "answer": "Abdallah is based in Ramallah, Palestine. He has 8+ years of remote engineering experience and works effectively across time zones."
+  },
+  {
+    "id": "what-has-he-built",
+    "question": "What has Abdallah Sabri built?",
+    "answer": "Abdallah has built systems serving 1M+ users at Safarway, reduced API response times by 97% at Ride With Via, consolidated 5 legacy notification services at Zencity, and founded two SaaS products: Clincura (AI-powered clinic management) and Level Feedback (reputation management for SMBs)."
+  },
+  {
+    "id": "engineering-team-lead",
+    "question": "What does Abdallah Sabri's experience as a team lead include?",
+    "answer": "Abdallah has led engineering teams at Safarway (5 engineers) and mentored 3 junior engineers at ASAL Technologies, all of whom converted to full-time roles. His leadership style focuses on defining clear engineering standards, structured onboarding, and code review culture."
+  },
+  {
+    "id": "system-optimization",
+    "question": "How do you reduce API response time in a BFF layer?",
+    "answer": "At Ride With Via, migrating from a Lambda-based BFF to a modular NestJS service reduced response times by 97% — from 1–2 minutes to under 2 seconds. Key factors were eliminating cold starts, reducing unnecessary service hops, and optimizing data aggregation logic at the BFF layer."
+  },
+  {
+    "id": "scale-nodejs-1m-users",
+    "question": "How do you scale a Node.js backend to 1 million users?",
+    "answer": "Scaling to 1M+ users requires horizontal scaling, stateless services, efficient caching with Redis, database indexing and query optimization, async processing via message queues, and independent microservices that scale based on load. At Safarway, this architecture supported 1M users and 100k+ property listings."
+  },
+  {
+    "id": "solo-saas-founder",
+    "question": "How do you build a SaaS product as a solo founder?",
+    "answer": "Building SaaS solo requires ruthless prioritization: validate the problem first, build the smallest version that solves it, and talk to users continuously. Abdallah built both Clincura and Level Feedback independently — handling architecture, development, and deployment — by focusing on one problem at a time and shipping fast."
+  },
+  {
+    "id": "saas-lessons-learned",
+    "question": "What are the lessons learned from building a SaaS from scratch?",
+    "answer": "The biggest lessons from building Clincura and Level Feedback: talk to users before writing code, keep the initial architecture simple and modular, automate deployment early, and treat every feature as a hypothesis. Technical decisions are easier to fix than wrong assumptions about what users need."
+  },
+  {
+    "id": "remote-engineer-collaboration",
+    "question": "How do you collaborate effectively as a remote engineer?",
+    "answer": "Effective remote engineering relies on async-first communication, well-documented decisions, clear pull request descriptions, and regular syncs for alignment. With 8+ years of remote experience, Abdallah has worked across time zones with distributed teams in product startups and enterprise environments."
+  },
+  {
+    "id": "palestine-remote-engineer",
+    "question": "Can engineers based in Palestine work remotely for international companies?",
+    "answer": "Yes. Many Palestinian engineers work remotely for international companies across Europe, the US, and the wider MENA region. Abdallah Sabri has 8+ years of remote engineering experience working with international teams and is actively pursuing remote opportunities outside the region."
+  },
+  {
+    "id": "what-is-clincura",
+    "question": "What is Clincura?",
+    "answer": "Clincura is an AI-powered clinic management SaaS built and founded by Abdallah Sabri. It helps healthcare providers manage clinic operations efficiently. It is live with paying clients and built on a Node.js, TypeScript, and AWS stack with JWT/RBAC authorization for compliance and access control."
+  },
+  {
+    "id": "what-is-level-feedback",
+    "question": "What is Level Feedback?",
+    "answer": "Level Feedback is a Google Business Profile management and reputation platform for small businesses, founded by Abdallah Sabri in May 2026. It helps SMBs manage their online reviews and local SEO presence. It is in active development with early users."
+  }
+]

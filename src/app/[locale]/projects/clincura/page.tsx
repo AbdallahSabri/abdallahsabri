@@ -21,6 +21,16 @@ interface Metric {
   label: string;
 }
 
+interface ArchDecision {
+  title: string;
+  body: string;
+}
+
+interface RelatedLink {
+  label: string;
+  href: string;
+}
+
 interface ClincuraData {
   label: string;
   heading: string;
@@ -32,11 +42,17 @@ interface ClincuraData {
   ogImageAlt: string;
   twitterTitle: string;
   twitterDescription: string;
+  intro: string;
+  statusBadge: string;
   problem: { heading: string; body: string };
   features: { heading: string; items: Feature[] };
   stack: { heading: string; groups: TechGroup[] };
+  architecturePhilosophy: string;
+  architectureDecisions: ArchDecision[];
   impact: { heading: string; metrics: Metric[] };
+  ctaBody: string;
   cta: { visitLabel: string; backLabel: string };
+  related: RelatedLink[];
 }
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -89,11 +105,17 @@ export default async function ClincuraPage() {
     ogImageAlt: t("ogImageAlt"),
     twitterTitle: t("twitterTitle"),
     twitterDescription: t("twitterDescription"),
+    intro: t("intro"),
+    statusBadge: t("statusBadge"),
     problem: t.raw("problem") as ClincuraData["problem"],
     features: t.raw("features") as ClincuraData["features"],
     stack: t.raw("stack") as ClincuraData["stack"],
+    architecturePhilosophy: t("architecturePhilosophy"),
+    architectureDecisions: t.raw("architectureDecisions") as ClincuraData["architectureDecisions"],
     impact: t.raw("impact") as ClincuraData["impact"],
+    ctaBody: t("ctaBody"),
     cta: t.raw("cta") as ClincuraData["cta"],
+    related: t.raw("related") as ClincuraData["related"],
   };
 
 
@@ -121,11 +143,17 @@ export default async function ClincuraPage() {
           period={data.period}
           tags={data.tags}
           backLabel={data.cta.backLabel}
+          intro={data.intro}
+          statusBadge={data.statusBadge}
           problem={data.problem}
           features={data.features}
           stack={data.stack}
+          architecturePhilosophy={data.architecturePhilosophy}
+          architectureDecisions={data.architectureDecisions}
           impact={data.impact}
-          cta={{ visitLabel: data.cta.visitLabel, href: "https://clincura.com" }}
+          ctaBody={data.ctaBody}
+          cta={{ visitLabel: data.cta.visitLabel, href: "mailto:abdallah.silwad@gmail.com" }}
+          related={data.related}
         />
       </main>
       <Footer />
