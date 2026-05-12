@@ -9,6 +9,7 @@
       "skills": "Skills",
       "volunteering": "Volunteering",
       "smb": "SMB Services",
+      "faq": "FAQ",
       "contact": "Contact"
     },
     "cta": "Hire me",
@@ -494,5 +495,10 @@
     "description": "Thoughts on engineering, product, and building.",
     "readArticle": "Read article",
     "empty": "No posts yet. Check back soon."
+  },
+  "FAQ": {
+    "label": "Frequently Asked Questions",
+    "heading": "Got questions?",
+    "description": "Answers to the most common questions I get about who I am, my work, and how to work together."
   }
 }
