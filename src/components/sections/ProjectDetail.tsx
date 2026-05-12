@@ -16,6 +16,16 @@ interface Metric {
   label: string;
 }
 
+interface ArchDecision {
+  title: string;
+  body: string;
+}
+
+interface RelatedLink {
+  label: string;
+  href: string;
+}
+
 interface ProjectDetailProps {
   label: string;
   name: string;
@@ -28,6 +38,12 @@ interface ProjectDetailProps {
   stack: { heading: string; groups: TechGroup[] };
   impact: { heading: string; metrics: Metric[] };
   cta: { visitLabel: string; href: string };
+  intro?: string;
+  statusBadge?: string;
+  architecturePhilosophy?: string;
+  architectureDecisions?: ArchDecision[];
+  ctaBody?: string;
+  related?: RelatedLink[];
 }
 
 export default function ProjectDetail({
@@ -42,6 +58,12 @@ export default function ProjectDetail({
   stack,
   impact,
   cta,
+  intro,
+  statusBadge,
+  architecturePhilosophy,
+  architectureDecisions,
+  ctaBody,
+  related,
 }: ProjectDetailProps) {
   return (
     <>
@@ -61,6 +83,10 @@ export default function ProjectDetail({
             </h1>
             <p className="mt-4 text-xl text-zinc-400">{tagline}</p>
 
+            {intro && (
+              <p className="mt-6 max-w-3xl text-base leading-relaxed text-zinc-300">{intro}</p>
+            )}
+
             <div className="mt-6 flex flex-wrap items-center gap-4">
               <span className="text-sm text-zinc-500">{period}</span>
               <div className="flex flex-wrap gap-2">
@@ -77,6 +103,17 @@ export default function ProjectDetail({
           </div>
         </div>
       </section>
+
+      {/* Status Badge */}
+      {statusBadge && (
+        <section className="border-y border-white/5 bg-[#18181b] py-4">
+          <div className="mx-auto max-w-6xl">
+            <span className="rounded-full bg-indigo-500/20 px-4 py-1.5 text-xs font-semibold text-indigo-300">
+              {statusBadge}
+            </span>
+          </div>
+        </section>
+      )}
 
       {/* Problem Section */}
       <section className="section-padding" aria-labelledby="problem-heading">
@@ -130,6 +167,19 @@ export default function ProjectDetail({
               </div>
             ))}
           </div>
+
+          {architecturePhilosophy && architectureDecisions && (
+            <div className="mt-16">
+              <p className="max-w-3xl text-base text-zinc-400">{architecturePhilosophy}</p>
+              <ul className="mt-8 space-y-6">
+                {architectureDecisions.map((d) => (
+                  <li key={d.title} className="max-w-3xl text-sm leading-relaxed text-zinc-400">
+                    <strong className="text-white">{d.title}</strong> — {d.body}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       </section>
 
@@ -153,6 +203,9 @@ export default function ProjectDetail({
       {/* CTA Section */}
       <section className="section-padding">
         <div className="mx-auto max-w-6xl text-center">
+          {ctaBody && (
+            <p className="mb-8 max-w-xl mx-auto text-zinc-400">{ctaBody}</p>
+          )}
           <a
             href={cta.href}
             target="_blank"
@@ -163,6 +216,24 @@ export default function ProjectDetail({
           </a>
         </div>
       </section>
+
+      {/* Related Links */}
+      {related && related.length > 0 && (
+        <section className="section-padding bg-[#18181b]" aria-labelledby="related-heading">
+          <div className="mx-auto max-w-6xl">
+            <h2 id="related-heading" className="text-xl font-semibold text-white">Related</h2>
+            <ul className="mt-6 space-y-3">
+              {related.map((r) => (
+                <li key={r.href}>
+                  <Link href={r.href} className="text-sm text-indigo-400 hover:text-indigo-300">
+                    {r.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      )}
     </>
   );
 }

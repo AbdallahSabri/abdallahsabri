@@ -76,12 +76,30 @@
       "When I'm not building software, I'm investing in people. I currently serve as President of Afaq Toastmasters Club, helping others grow their communication and leadership skills. I also volunteer as Secretary and Board Member of Silwad Students Association, managing administrative operations, supporting university community initiatives, and making sure student voices are heard and acted upon."
     ],
     "stats": [
-      { "value": "15+", "label": "Years of Engineering Experience" },
-      { "value": "1M+", "label": "Users Reached — Grew with Safarway from Day Zero as First Employee" },
-      { "value": "2", "label": "SaaS Products Built & Launched" },
-      { "value": "8+", "label": "Years Remote Engineering" },
-      { "value": "97%", "label": "API Response Time Reduced as Part of BFF Migration to NestJS (Ride With Via)" },
-      { "value": "5", "label": "Legacy Notification Services Consolidated into One Unified System (Zencity)" }
+      {
+        "value": "15+",
+        "label": "Years of Engineering Experience"
+      },
+      {
+        "value": "1M+",
+        "label": "Users Reached — Grew with Safarway from Day Zero as First Employee"
+      },
+      {
+        "value": "2",
+        "label": "SaaS Products Built & Launched"
+      },
+      {
+        "value": "8+",
+        "label": "Years Remote Engineering"
+      },
+      {
+        "value": "97%",
+        "label": "API Response Time Reduced as Part of BFF Migration to NestJS (Ride With Via)"
+      },
+      {
+        "value": "5",
+        "label": "Legacy Notification Services Consolidated into One Unified System (Zencity)"
+      }
     ]
   },
   "Services": {
@@ -132,8 +150,22 @@
         "role": "Founder & Architect",
         "period": "Dec 2024 – Present",
         "description": "An AI-powered clinic management SaaS platform built for Clinic operations. Handles scheduling, patient records, billing, and staff management — live with paying clients.",
-        "stack": ["React", "NestJS", "TypeScript", "PostgreSQL", "RabbitMQ", "Event Driven Architecture","JWT/RBAC", "OpenAPI", "AWS S3"],
-        "tags": ["SaaS Product", "Healthcare Tech", "Founder"],
+        "stack": [
+          "React",
+          "NestJS",
+          "TypeScript",
+          "PostgreSQL",
+          "RabbitMQ",
+          "Event Driven Architecture",
+          "JWT/RBAC",
+          "OpenAPI",
+          "AWS S3"
+        ],
+        "tags": [
+          "SaaS Product",
+          "Healthcare Tech",
+          "Founder"
+        ],
         "featured": true,
         "href": "/projects/clincura"
       },
@@ -142,8 +174,21 @@
         "role": "Founder & Architect",
         "period": "Dec 2024 – Present",
         "description": "A platform automating Google Business Profile management and reputation monitoring for small businesses. Built with a focus on simplicity for non-technical SMB owners.",
-        "stack": ["Next.js", "Firebase", "Stripe", "Twilio", "RabbitMQ", "Event Driven Architecture","Vercel", "Claude API"],
-        "tags": ["SaaS Product", "SMB", "Founder"],
+        "stack": [
+          "Next.js",
+          "Firebase",
+          "Stripe",
+          "Twilio",
+          "RabbitMQ",
+          "Event Driven Architecture",
+          "Vercel",
+          "Claude API"
+        ],
+        "tags": [
+          "SaaS Product",
+          "SMB",
+          "Founder"
+        ],
         "featured": true,
         "href": "/projects/level-feedback"
       },
@@ -152,32 +197,69 @@
         "role": "Senior Software Engineer @ ASAL Technologies",
         "period": "2021 – 2023",
         "description": "Worked as a full-stack engineer across multiple areas of a transit platform serving 100,000+ active users. Migrated the BFF layer to NestJS, reducing API response times by 97% — from 1–2 minutes down to under 3 seconds. Also built and maintained the Agent Management admin panel.",
-        "stack": ["Node.js", "NestJS", "REST APIs", "React.js", "Redux"],
-        "tags": ["Transit Tech", "Performance", "Full-Stack"]
+        "stack": [
+          "Node.js",
+          "NestJS",
+          "REST APIs",
+          "React.js",
+          "Redux"
+        ],
+        "tags": [
+          "Transit Tech",
+          "Performance",
+          "Full-Stack"
+        ]
       },
       {
         "title": "Zencity — Senior Software Engineer",
         "role": "Senior Software Engineer @ ASAL Technologies",
         "period": "2023 – 2024",
         "description": "Contributed across multiple product areas for a GovTech platform serving 300+ government clients. Key projects included consolidating 5 legacy notification services into a unified delivery system, building a custom report builder, and contributing to core platform development.",
-        "stack": ["Node.js", "TypeScript", "React.js", "Module Federation", "Storybook"],
-        "tags": ["GovTech", "Platform Engineering", "Full-Stack"]
+        "stack": [
+          "Node.js",
+          "TypeScript",
+          "React.js",
+          "Module Federation",
+          "Storybook"
+        ],
+        "tags": [
+          "GovTech",
+          "Platform Engineering",
+          "Full-Stack"
+        ]
       },
       {
         "title": "Safarway — From Day Zero",
         "role": "First Employee · Senior Engineer · Team Leader",
         "period": "2018 – 2021",
         "description": "Joined as the first employee and became the founder's right hand — from finding the office and setting up infrastructure, to hiring and managing the engineering team. Lived the full journey from zero to a global travel platform serving ~1M users and 100,000+ property listings. Architected core services including Social Engine, User Profiles, and Property Management.",
-        "stack": ["Node.js", "Microservices", "PostgreSQL", "MongoDB"],
-        "tags": ["Travel Tech", "Scale", "Team Lead", "0→1", "First Employee"]
+        "stack": [
+          "Node.js",
+          "Microservices",
+          "PostgreSQL",
+          "MongoDB"
+        ],
+        "tags": [
+          "Travel Tech",
+          "Scale",
+          "Team Lead",
+          "0→1",
+          "First Employee"
+        ]
       },
       {
         "title": "Ministry of Transport — Citizen Portal & e-services",
         "role": "Senior Software Engineer",
         "period": "2014 – 2018",
         "description": "Built the Palestinian Ministry of Transport's public-facing website and citizen portal. Integrated systems across multiple government ministries for unified data access and service delivery.",
-        "stack": ["Web", "Government Systems Integration"],
-        "tags": ["GovTech", "Public Sector"]
+        "stack": [
+          "Web",
+          "Government Systems Integration"
+        ],
+        "tags": [
+          "GovTech",
+          "Public Sector"
+        ]
       }
     ]
   },
@@ -264,14 +346,89 @@
     "label": "Skills & Toolkit",
     "heading": "What I build with",
     "groups": [
-      { "category": "Languages", "skills": ["JavaScript (ES6+)", "TypeScript", "SQL", "HTML5", "CSS3"] },
-      { "category": "Backend", "skills": ["Node.js", "NestJS", "Express.js", "Microservices", "BFF Architecture", "REST APIs"] },
-      { "category": "Databases & Messaging", "skills": ["PostgreSQL", "MongoDB", "DynamoDB", "Redis", "RabbitMQ", "SQS", "SNS"] },
-      { "category": "Frontend", "skills": ["React.js", "Next.js", "Redux", "React Query", "Material UI", "Storybook"] },
-      { "category": "Cloud & DevOps", "skills": ["AWS (Lambda, S3, RDS, Cognito)", "Firebase (Auth, Firestore, Storage)", "Docker", "CI/CD Pipelines", "Vercel", "Swagger / OpenAPI"] },
-      { "category": "Architecture", "skills": ["Event-Driven Architecture", "Distributed Systems", "Monolith to Microservices", "Scalability Engineering"] },
-      { "category": "Testing", "skills": ["Jest", "Unit Testing", "Integration Testing", "Test-Driven Development (TDD)"] },
-      { "category": "Practices", "skills": ["System Design", "Performance Optimization", "Technical Leadership", "Agile / Scrum", "Code Review"] }
+      {
+        "category": "Languages",
+        "skills": [
+          "JavaScript (ES6+)",
+          "TypeScript",
+          "SQL",
+          "HTML5",
+          "CSS3"
+        ]
+      },
+      {
+        "category": "Backend",
+        "skills": [
+          "Node.js",
+          "NestJS",
+          "Express.js",
+          "Microservices",
+          "BFF Architecture",
+          "REST APIs"
+        ]
+      },
+      {
+        "category": "Databases & Messaging",
+        "skills": [
+          "PostgreSQL",
+          "MongoDB",
+          "DynamoDB",
+          "Redis",
+          "RabbitMQ",
+          "SQS",
+          "SNS"
+        ]
+      },
+      {
+        "category": "Frontend",
+        "skills": [
+          "React.js",
+          "Next.js",
+          "Redux",
+          "React Query",
+          "Material UI",
+          "Storybook"
+        ]
+      },
+      {
+        "category": "Cloud & DevOps",
+        "skills": [
+          "AWS (Lambda, S3, RDS, Cognito)",
+          "Firebase (Auth, Firestore, Storage)",
+          "Docker",
+          "CI/CD Pipelines",
+          "Vercel",
+          "Swagger / OpenAPI"
+        ]
+      },
+      {
+        "category": "Architecture",
+        "skills": [
+          "Event-Driven Architecture",
+          "Distributed Systems",
+          "Monolith to Microservices",
+          "Scalability Engineering"
+        ]
+      },
+      {
+        "category": "Testing",
+        "skills": [
+          "Jest",
+          "Unit Testing",
+          "Integration Testing",
+          "Test-Driven Development (TDD)"
+        ]
+      },
+      {
+        "category": "Practices",
+        "skills": [
+          "System Design",
+          "Performance Optimization",
+          "Technical Leadership",
+          "Agile / Scrum",
+          "Code Review"
+        ]
+      }
     ]
   },
   "Volunteering": {
@@ -325,10 +482,22 @@
     "description": "Whether you're looking to hire, collaborate, or explore a consulting engagement — I'd love to hear what you're working on.",
     "detailsHeading": "Contact Details",
     "contactItems": [
-      { "label": "Email", "display": "info@abdallahsabri.com" },
-      { "label": "1 Hour Consultation", "display": "calendly.com/abdallah-sabri" },
-      { "label": "LinkedIn", "display": "linkedin.com/in/abdallah-sabri" },
-      { "label": "Location", "display": "Ramallah, Palestine — Open to Remote Worldwide & Relocation" }
+      {
+        "label": "Email",
+        "display": "info@abdallahsabri.com"
+      },
+      {
+        "label": "1 Hour Consultation",
+        "display": "calendly.com/abdallah-sabri"
+      },
+      {
+        "label": "LinkedIn",
+        "display": "linkedin.com/in/abdallah-sabri"
+      },
+      {
+        "label": "Location",
+        "display": "Ramallah, Palestine — Open to Remote Worldwide & Relocation"
+      }
     ],
     "form": {
       "fullName": "Full Name",
@@ -347,7 +516,11 @@
       "message": "Tell me more",
       "messagePlaceholder": "Brief description of what you're working on or what you need…",
       "contactMethod": "Preferred contact method",
-      "methods": ["Email", "WhatsApp", "Phone Call"],
+      "methods": [
+        "Email",
+        "WhatsApp",
+        "Phone Call"
+      ],
       "submit": "Send Message",
       "submitting": "Sending…",
       "successMessage": "Message sent! I'll get back to you soon.",
@@ -384,7 +557,11 @@
         "tagline": "AI-Powered Clinic Management for Clinic Operations",
         "period": "Dec 2024 – Present",
         "description": "An AI-powered clinic management SaaS platform built for Clinic operations. Handles scheduling, patient records, billing, and staff management — live with paying clients.",
-        "tags": ["SaaS Product", "Healthcare Tech", "Founder"],
+        "tags": [
+          "SaaS Product",
+          "Healthcare Tech",
+          "Founder"
+        ],
         "featured": true,
         "href": "/projects/clincura"
       },
@@ -393,7 +570,11 @@
         "tagline": "Automated Reputation Management for Small Businesses",
         "period": "May 2026 – Present",
         "description": "A platform automating Google Business Profile management and reputation monitoring for small businesses. Built with a focus on simplicity for non-technical SMB owners.",
-        "tags": ["SaaS Product", "SMB", "Founder"],
+        "tags": [
+          "SaaS Product",
+          "SMB",
+          "Founder"
+        ],
         "featured": true,
         "href": "/projects/level-feedback"
       }
@@ -402,55 +583,161 @@
   "Clincura": {
     "label": "Healthcare SaaS",
     "heading": "Clincura",
-    "tagline": "AI-Powered Clinic Management for Clinic Operations",
+    "tagline": "Clinic management that gets out of the way",
     "period": "Dec 2024 – Present",
-    "tags": ["Founder", "SaaS", "Healthcare Tech"],
+    "tags": [
+      "Founder",
+      "SaaS",
+      "Healthcare Tech"
+    ],
     "ogTitle": "Clincura — AI-Powered Clinic Management SaaS | Abdallah Sabri",
-    "ogDescription": "Built from scratch: a Clinic SaaS with AI scheduling, RBAC, and event-driven architecture.",
+    "ogDescription": "Clincura is an AI-powered clinic management SaaS for independent doctors and small-to-medium clinics — unified patient records, diagnostic workflows, and AI-generated visit summaries.",
     "ogImageAlt": "Clincura — clinic management SaaS by Abdallah Sabri",
     "twitterTitle": "Clincura — AI Clinic Management SaaS",
-    "twitterDescription": "Built from scratch: Clinic SaaS with AI scheduling and event-driven architecture.",
+    "twitterDescription": "Unified patient records, diagnostic workflows, and AI visit summaries for independent clinics.",
+    "intro": "Clincura is an AI-powered clinic management SaaS for independent doctors and small-to-medium clinics. It brings patient history, appointments, diagnostics, and clinical documentation into a single view so providers spend their time on patients, not software. Most clinic tools are either too thin for a growing practice or too complex for a five-person team — Clincura is built for exactly that gap.",
+    "statusBadge": "MVP — accepting pilot clinic applications",
     "problem": {
       "heading": "The Problem",
-      "body": "Clinics across the region run on paper systems or fragmented point solutions — no unified view of operations, no centralized patient records, and inefficient scheduling that leads to lost revenue and patient frustration."
+      "body": "Independent clinics and small practices run on paper systems or a patchwork of disconnected tools. There is no unified patient record, no workflow for tracking diagnostics end-to-end, and no clinical documentation support. The result is administrative drag that takes time away from patient care."
     },
     "features": {
-      "heading": "Key Features",
+      "heading": "What Clincura does",
       "items": [
-        { "title": "Clinic Management", "description": "Unified dashboard across locations with per-clinic RBAC." },
-        { "title": "AI Scheduling", "description": "Intelligent appointment booking that reduces no-shows." },
-        { "title": "Event-Driven Architecture", "description": "RabbitMQ-backed system for reliable async workflows." },
-        { "title": "OpenAPI-First", "description": "Fully documented REST API for third-party integrations." },
-        { "title": "Role-Based Access Control", "description": "Granular permissions for admins, doctors, and staff." },
-        { "title": "Cloud Storage", "description": "Secure patient documents via AWS S3." }
+        {
+          "title": "Unified Patient Management",
+          "description": "Every patient's appointments, diagnoses, vital signs, and clinical history are accessible from one screen. There is no switching between systems or searching through paper files. The full record is there from the moment a patient checks in."
+        },
+        {
+          "title": "Integrated Diagnostic Workflows",
+          "description": "Doctors can place lab and imaging requests directly inside a visit, upload results, and track status without leaving the patient view. The request-to-result workflow is captured in the system, not on a notepad."
+        },
+        {
+          "title": "AI-Powered Visit Summaries",
+          "description": "After each consultation, Clincura generates a clinical documentation draft using OpenAI. The doctor reviews and confirms rather than typing from scratch. The result is faster notes and a consistent documentation standard across the clinic."
+        },
+        {
+          "title": "Role-Based Access and Clinic Controls",
+          "description": "Each clinic gets granular permission controls and per-feature toggles. A receptionist can manage appointments without accessing clinical records. A clinic admin can configure features without touching another clinic's data."
+        }
       ]
     },
     "stack": {
-      "heading": "Tech Stack",
+      "heading": "How it's built",
       "groups": [
-        { "category": "Frontend", "items": ["React", "TypeScript"] },
-        { "category": "Backend", "items": ["NestJS", "TypeScript", "PostgreSQL", "RabbitMQ"] },
-        { "category": "Infrastructure", "items": ["AWS S3", "Docker", "CI/CD"] },
-        { "category": "Auth", "items": ["JWT", "RBAC"] },
-        { "category": "Docs", "items": ["OpenAPI"] }
+        {
+          "category": "Backend",
+          "items": [
+            "NestJS",
+            "TypeScript",
+            "Node.js"
+          ]
+        },
+        {
+          "category": "Database",
+          "items": [
+            "PostgreSQL",
+            "TypeORM"
+          ]
+        },
+        {
+          "category": "Auth",
+          "items": [
+            "JWT",
+            "Passport.js"
+          ]
+        },
+        {
+          "category": "File Storage",
+          "items": [
+            "AWS S3"
+          ]
+        },
+        {
+          "category": "Async",
+          "items": [
+            "RabbitMQ"
+          ]
+        },
+        {
+          "category": "AI",
+          "items": [
+            "OpenAI API"
+          ]
+        },
+        {
+          "category": "Standards",
+          "items": [
+            "WHO ICD-10 API"
+          ]
+        },
+        {
+          "category": "Deployment",
+          "items": [
+            "Docker",
+            "Docker Compose"
+          ]
+        }
       ]
     },
+    "architecturePhilosophy": "Built as a multi-tenant SaaS with strict data isolation and production-grade security designed into the core from day one.",
+    "architectureDecisions": [
+      {
+        "title": "RabbitMQ for async processing",
+        "body": "Notifications and audio conversion run asynchronously via RabbitMQ, keeping API response times predictable regardless of background task load. Without a queue, long-running jobs would block the request thread or hit timeout failures."
+      },
+      {
+        "title": "Pre-signed S3 URLs for file access",
+        "body": "Patient documents go directly from S3 to the client — the application server never handles the file bytes. This keeps medical files off application logs and removes the server as a bottleneck for large uploads."
+      },
+      {
+        "title": "WHO ICD-10 for diagnosis codes",
+        "body": "Diagnosis codes come from the WHO ICD-10 API rather than a local lookup table. A local table would drift and require ongoing maintenance; the external API guarantees clinical accuracy without the overhead."
+      }
+    ],
     "impact": {
-      "heading": "Results",
+      "heading": "Built with production constraints in mind",
       "metrics": [
-        { "value": "Dec 2024", "label": "First version shipped" },
-        { "value": "Clinic", "label": "Supports multi-location operations" },
-        { "value": "Event-driven", "label": "Async-first architecture from day one" }
+        {
+          "value": "Secure by default",
+          "label": "JWT refresh tokens, Bcrypt, Helmet, rate limiting, and CORS configured before the first feature shipped"
+        },
+        {
+          "value": "AI in workflow",
+          "label": "OpenAI generates structured documentation that writes directly into the patient visit record"
+        },
+        {
+          "value": "ICD-10 compliant",
+          "label": "Diagnosis codes follow the WHO international standard for clinical accuracy and interoperability"
+        }
       ]
     },
-    "cta": { "visitLabel": "Visit Clincura", "backLabel": "← All Projects" }
+    "ctaBody": "Clincura is in active development and looking for pilot clinics to validate the core workflow. If you run an independent practice or a small clinic and would like to be an early user, I want to hear from you.",
+    "cta": {
+      "visitLabel": "Contact for pilot access",
+      "backLabel": "← All Projects"
+    },
+    "related": [
+      {
+        "label": "About Abdallah Sabri",
+        "href": "/about"
+      },
+      {
+        "label": "Level Feedback — SMB reputation management SaaS",
+        "href": "/projects/level-feedback"
+      }
+    ]
   },
   "LevelFeedback": {
     "label": "SMB SaaS",
     "heading": "Level Feedback",
     "tagline": "Automated Reputation Management for Small Businesses",
     "period": "May 2026 – Present",
-    "tags": ["Founder", "SaaS", "SMB"],
+    "tags": [
+      "Founder",
+      "SaaS",
+      "SMB"
+    ],
     "ogTitle": "Level Feedback — SMB Reputation Management | Abdallah Sabri",
     "ogDescription": "Automates Google Business Profile management and review monitoring for small businesses.",
     "twitterTitle": "Level Feedback — SMB Reputation Management",
@@ -462,32 +749,87 @@
     "features": {
       "heading": "Key Features",
       "items": [
-        { "title": "Google Business Profile Automation", "description": "Auto-publish posts, respond to reviews, and manage Q&A." },
-        { "title": "Review Monitoring", "description": "Real-time alerts for new reviews across platforms." },
-        { "title": "Twilio SMS Campaigns", "description": "Automated SMS follow-ups to collect customer feedback." },
-        { "title": "Stripe Billing", "description": "Subscription management with usage-based tiers." },
-        { "title": "Claude AI Integration", "description": "AI-generated review response drafts." },
-        { "title": "Event-Driven Core", "description": "RabbitMQ + Firebase for reliable async processing." }
+        {
+          "title": "Google Business Profile Automation",
+          "description": "Auto-publish posts, respond to reviews, and manage Q&A."
+        },
+        {
+          "title": "Review Monitoring",
+          "description": "Real-time alerts for new reviews across platforms."
+        },
+        {
+          "title": "Twilio SMS Campaigns",
+          "description": "Automated SMS follow-ups to collect customer feedback."
+        },
+        {
+          "title": "Stripe Billing",
+          "description": "Subscription management with usage-based tiers."
+        },
+        {
+          "title": "Claude AI Integration",
+          "description": "AI-generated review response drafts."
+        },
+        {
+          "title": "Event-Driven Core",
+          "description": "RabbitMQ + Firebase for reliable async processing."
+        }
       ]
     },
     "stack": {
       "heading": "Tech Stack",
       "groups": [
-        { "category": "Frontend", "items": ["Next.js", "TypeScript"] },
-        { "category": "Backend", "items": ["Firebase", "RabbitMQ"] },
-        { "category": "Integrations", "items": ["Stripe", "Twilio", "Claude API", "Google APIs"] },
-        { "category": "Infrastructure", "items": ["Vercel"] }
+        {
+          "category": "Frontend",
+          "items": [
+            "Next.js",
+            "TypeScript"
+          ]
+        },
+        {
+          "category": "Backend",
+          "items": [
+            "Firebase",
+            "RabbitMQ"
+          ]
+        },
+        {
+          "category": "Integrations",
+          "items": [
+            "Stripe",
+            "Twilio",
+            "Claude API",
+            "Google APIs"
+          ]
+        },
+        {
+          "category": "Infrastructure",
+          "items": [
+            "Vercel"
+          ]
+        }
       ]
     },
     "impact": {
       "heading": "Results",
       "metrics": [
-        { "value": "May 2026", "label": "Launched" },
-        { "value": "Claude AI", "label": "AI-powered review responses" },
-        { "value": "Automated", "label": "Full GBP management workflow" }
+        {
+          "value": "May 2026",
+          "label": "Launched"
+        },
+        {
+          "value": "Claude AI",
+          "label": "AI-powered review responses"
+        },
+        {
+          "value": "Automated",
+          "label": "Full GBP management workflow"
+        }
       ]
     },
-    "cta": { "visitLabel": "Visit Level Feedback", "backLabel": "← All Projects" }
+    "cta": {
+      "visitLabel": "Visit Level Feedback",
+      "backLabel": "← All Projects"
+    }
   },
   "Blog": {
     "label": "Blog",
