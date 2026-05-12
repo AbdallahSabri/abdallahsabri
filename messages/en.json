@@ -731,105 +731,142 @@
   "LevelFeedback": {
     "label": "SMB SaaS",
     "heading": "Level Feedback",
-    "tagline": "Automated Reputation Management for Small Businesses",
+    "tagline": "Automated review replies for restaurants and auto shops — no manual work required.",
     "period": "May 2026 – Present",
     "tags": [
       "Founder",
       "SaaS",
       "SMB"
     ],
-    "ogTitle": "Level Feedback — SMB Reputation Management | Abdallah Sabri",
-    "ogDescription": "Automates Google Business Profile management and review monitoring for small businesses.",
-    "twitterTitle": "Level Feedback — SMB Reputation Management",
-    "twitterDescription": "Automated Google Business Profile management and reputation monitoring for SMBs.",
+    "ogTitle": "Level Feedback — Automated Reputation Management | Abdallah Sabri",
+    "ogDescription": "Level Feedback automates Google review responses for restaurants and automotive businesses — AI-generated replies, one-click publishing, local SEO impact.",
+    "twitterTitle": "Level Feedback — Automated Reputation Management",
+    "twitterDescription": "AI-generated review replies for restaurants and auto shops. One click to publish. Built for US small businesses.",
+    "intro": "Level Feedback is a reputation management SaaS that generates professional, contextual responses to customer reviews and publishes them directly to Google — so business owners spend minutes, not hours, managing their online presence. It is built specifically for small and medium-sized businesses in the food & drinks and automotive sectors across the USA.",
+    "statusBadge": "In development — launching June 2026",
     "problem": {
       "heading": "The Problem",
-      "body": "Small businesses lose customers every day because they can't respond fast enough to reviews, can't manage their Google Business Profile effectively, and don't have time for the admin overhead of reputation management. Their competitors with proper review systems are eating their lunch."
+      "body": "Restaurant and automotive business owners lose visibility every day because they cannot respond to reviews consistently. Manual review management takes time owners do not have. Unanswered reviews damage local search rankings and erode trust with potential customers."
     },
     "features": {
-      "heading": "Key Features",
+      "heading": "What Level Feedback does",
       "items": [
         {
-          "title": "Google Business Profile Automation",
-          "description": "Auto-publish posts, respond to reviews, and manage Q&A."
+          "title": "Automated Professional Replies",
+          "description": "Level Feedback reads each review and generates a contextual, tone-aware response using the Claude API. One click submits the reply. Owners get professional responses without writing a single word themselves."
         },
         {
-          "title": "Review Monitoring",
-          "description": "Real-time alerts for new reviews across platforms."
+          "title": "Google Business Profile Integration",
+          "description": "Reviews from your Google Business Profile appear directly inside the Level Feedback dashboard. You read, edit if needed, and submit — without opening Google, switching tabs, or managing logins separately."
         },
         {
-          "title": "Twilio SMS Campaigns",
-          "description": "Automated SMS follow-ups to collect customer feedback."
+          "title": "Local SEO Improvement",
+          "description": "Responding to reviews is a confirmed Google ranking signal for local search. Every published reply through Level Feedback contributes to the activity signals Google uses to rank businesses in local results."
         },
         {
-          "title": "Stripe Billing",
-          "description": "Subscription management with usage-based tiers."
+          "title": "Review Management Dashboard",
+          "description": "All reviews are surfaced in one place, filterable by rating and reply status. Owners can see at a glance what needs attention, what has been replied to, and how their overall reputation looks."
         },
         {
-          "title": "Claude AI Integration",
-          "description": "AI-generated review response drafts."
-        },
-        {
-          "title": "Event-Driven Core",
-          "description": "RabbitMQ + Firebase for reliable async processing."
+          "title": "Token-Secured OAuth Flow",
+          "description": "Connecting a Google account is handled through a standard OAuth 2.0 flow. All credentials are stored with AES-256 encryption and refresh automatically, so the connection stays active without requiring owners to re-authenticate."
         }
       ]
     },
     "stack": {
-      "heading": "Tech Stack",
+      "heading": "How it's built",
       "groups": [
         {
           "category": "Frontend",
           "items": [
             "Next.js",
+            "React",
             "TypeScript"
           ]
         },
         {
           "category": "Backend",
           "items": [
-            "Firebase",
-            "RabbitMQ"
-          ]
-        },
-        {
-          "category": "Integrations",
-          "items": [
-            "Stripe",
-            "Twilio",
-            "Claude API",
-            "Google APIs"
-          ]
-        },
-        {
-          "category": "Infrastructure",
-          "items": [
+            "Next.js API Routes",
             "Vercel"
           ]
+        },
+        {
+          "category": "Database & Auth",
+          "items": [
+            "Firebase Firestore",
+            "Firebase Auth",
+            "Google OAuth 2.0"
+          ]
+        },
+        {
+          "category": "AI & Security",
+          "items": [
+            "Claude API (Anthropic)",
+            "AES-256 encryption"
+          ]
         }
       ]
     },
+    "architecturePhilosophy": "The architecture minimizes operational overhead — serverless where possible, managed services for auth and data, encryption handled at the storage layer.",
+    "architectureDecisions": [
+      {
+        "title": "Vercel serverless over a dedicated backend",
+        "body": "The API surface is modest and event-driven. Serverless routes on Vercel eliminate infrastructure management without sacrificing response times for the request patterns this app generates."
+      },
+      {
+        "title": "Firebase Firestore over a relational database",
+        "body": "Review data arrives asynchronously and read patterns are dashboard-driven, not relational. Firestore's real-time sync fits that model better than polling a SQL database for new records."
+      },
+      {
+        "title": "Claude API for response generation",
+        "body": "Claude handles nuanced tone matching well. A one-star complaint and a four-star compliment need meaningfully different responses. Generic templates do not hold up at scale."
+      },
+      {
+        "title": "AES-256 encryption for OAuth tokens at rest",
+        "body": "Google OAuth credentials give the app the ability to post on behalf of a business. Storing tokens encrypted means a database breach does not automatically expose Google account access."
+      }
+    ],
     "impact": {
-      "heading": "Results",
+      "heading": "Built for real business impact",
       "metrics": [
         {
-          "value": "May 2026",
-          "label": "Launched"
+          "value": "1-Click",
+          "label": "AI-generated replies per review, not templates"
         },
         {
-          "value": "Claude AI",
-          "label": "AI-powered review responses"
+          "value": "Google-native",
+          "label": "Replies published directly through the API"
         },
         {
-          "value": "Automated",
-          "label": "Full GBP management workflow"
+          "value": "AES-256",
+          "label": "OAuth credentials encrypted before storage"
+        },
+        {
+          "value": "Local SEO",
+          "label": "Every reply builds compounding ranking signals"
         }
       ]
     },
+    "ctaBody": "Level Feedback launches in June 2026. If you run a restaurant or automotive business and want to stop losing time to manual review management, reach out before launch — early feedback shapes the product before it goes live.",
     "cta": {
-      "visitLabel": "Visit Level Feedback",
+      "visitLabel": "Get Early Access",
       "backLabel": "← All Projects"
-    }
+    },
+    "related": [
+      {
+        "label": "About Abdallah Sabri — background, stack, and what I build",
+        "href": "/about"
+      },
+      {
+        "label": "Clincura — clinic management platform",
+        "href": "/projects/clincura"
+      },
+      {
+        "label": "From monolith to microservices",
+        "href": "/blog/from-monolith-to-microservices"
+      }
+    ]
   },
   "Blog": {
     "label": "Blog",

@@ -21,6 +21,16 @@ interface Metric {
   label: string;
 }
 
+interface ArchDecision {
+  title: string;
+  body: string;
+}
+
+interface RelatedLink {
+  label: string;
+  href: string;
+}
+
 interface LevelFeedbackData {
   label: string;
   heading: string;
@@ -29,11 +39,17 @@ interface LevelFeedbackData {
   tags: string[];
   ogTitle: string;
   ogDescription: string;
+  intro: string;
+  statusBadge: string;
   problem: { heading: string; body: string };
   features: { heading: string; items: Feature[] };
   stack: { heading: string; groups: TechGroup[] };
+  architecturePhilosophy: string;
+  architectureDecisions: ArchDecision[];
   impact: { heading: string; metrics: Metric[] };
+  ctaBody: string;
   cta: { visitLabel: string; backLabel: string };
+  related: RelatedLink[];
 }
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -83,11 +99,17 @@ export default async function LevelFeedbackPage() {
     tags: t.raw("tags") as string[],
     ogTitle: t("ogTitle"),
     ogDescription: t("ogDescription"),
+    intro: t("intro"),
+    statusBadge: t("statusBadge"),
     problem: t.raw("problem") as LevelFeedbackData["problem"],
     features: t.raw("features") as LevelFeedbackData["features"],
     stack: t.raw("stack") as LevelFeedbackData["stack"],
+    architecturePhilosophy: t("architecturePhilosophy"),
+    architectureDecisions: t.raw("architectureDecisions") as ArchDecision[],
     impact: t.raw("impact") as LevelFeedbackData["impact"],
+    ctaBody: t("ctaBody"),
     cta: t.raw("cta") as LevelFeedbackData["cta"],
+    related: t.raw("related") as RelatedLink[],
   };
 
 
@@ -115,11 +137,17 @@ export default async function LevelFeedbackPage() {
           period={data.period}
           tags={data.tags}
           backLabel={data.cta.backLabel}
+          intro={data.intro}
+          statusBadge={data.statusBadge}
           problem={data.problem}
           features={data.features}
           stack={data.stack}
+          architecturePhilosophy={data.architecturePhilosophy}
+          architectureDecisions={data.architectureDecisions}
           impact={data.impact}
-          cta={{ visitLabel: data.cta.visitLabel, href: "https://levelfeedback.com" }}
+          ctaBody={data.ctaBody}
+          cta={{ visitLabel: data.cta.visitLabel, href: "mailto:abdallah.silwad@gmail.com" }}
+          related={data.related}
         />
       </main>
       <Footer />
