@@ -28,5 +28,93 @@ export default function sitemap(): MetadataRoute.Sitemap {
         },
       },
     },
+    {
+      url: `${BASE_URL}/en/about`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.9,
+      alternates: {
+        languages: {
+          ar: `${BASE_URL}/ar/about`,
+        },
+      },
+    },
+    {
+      url: `${BASE_URL}/ar/about`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.9,
+      alternates: {
+        languages: {
+          en: `${BASE_URL}/en/about`,
+        },
+      },
+    },
+    {
+      url: `${BASE_URL}/en/projects`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+      alternates: {
+        languages: {
+          ar: `${BASE_URL}/ar/projects`,
+        },
+      },
+    },
+    {
+      url: `${BASE_URL}/ar/projects`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+      alternates: {
+        languages: {
+          en: `${BASE_URL}/en/projects`,
+        },
+      },
+    },
+    {
+      url: `${BASE_URL}/en/projects/clincura`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+      alternates: {
+        languages: {
+          ar: `${BASE_URL}/ar/projects/clincura`,
+        },
+      },
+    },
+    {
+      url: `${BASE_URL}/ar/projects/clincura`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+      alternates: {
+        languages: {
+          en: `${BASE_URL}/en/projects/clincura`,
+        },
+      },
+    },
+    {
+      url: `${BASE_URL}/en/projects/level-feedback`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+      alternates: {
+        languages: {
+          ar: `${BASE_URL}/ar/projects/level-feedback`,
+        },
+      },
+    },
+    {
+      url: `${BASE_URL}/ar/projects/level-feedback`,
+      lastModified,
+      changeFrequency: "monthly",
+      priority: 0.8,
+      alternates: {
+        languages: {
+          en: `${BASE_URL}/en/projects/level-feedback`,
+        },
+      },
+    },
   ];
 }

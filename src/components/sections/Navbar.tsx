@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { useTranslations, useLocale } from "next-intl";
-import { useRouter, usePathname } from "@/i18n/routing";
+import { useRouter, usePathname, Link } from "@/i18n/routing";
 
 export default function Navbar() {
   const t = useTranslations("Navbar");
@@ -19,14 +19,15 @@ export default function Navbar() {
   }, [open]);
 
   const navLinks = [
-    { label: t("links.about"), href: "#about" },
-    { label: t("links.services"), href: "#services" },
-    { label: t("links.work"), href: "#work" },
-    { label: t("links.experience"), href: "#experience" },
-    { label: t("links.skills"), href: "#skills" },
-    { label: t("links.volunteering"), href: "#volunteering" },
-    { label: t("links.smb"), href: "#smb" },
-    { label: t("links.contact"), href: "#contact" },
+    { label: t("links.about"), href: "#about", type: "anchor" },
+    { label: t("links.services"), href: "#services", type: "anchor" },
+    { label: t("links.work"), href: "#work", type: "anchor" },
+    { label: t("links.projects"), href: "/projects", type: "page" },
+    { label: t("links.experience"), href: "#experience", type: "anchor" },
+    { label: t("links.skills"), href: "#skills", type: "anchor" },
+    { label: t("links.volunteering"), href: "#volunteering", type: "anchor" },
+    { label: t("links.smb"), href: "#smb", type: "anchor" },
+    { label: t("links.contact"), href: "#contact", type: "anchor" },
   ];
 
   const switchLocale = () => {
@@ -46,14 +47,23 @@ export default function Navbar() {
 
           {/* Desktop nav */}
           <ul className="hidden items-center gap-8 md:flex">
-            {navLinks.map(({ label, href }) => (
+            {navLinks.map(({ label, href, type }) => (
               <li key={href}>
-                <a
-                  href={href}
-                  className="text-sm text-zinc-400 transition-colors hover:text-white"
-                >
-                  {label}
-                </a>
+                {type === "page" ? (
+                  <Link
+                    href={href}
+                    className="text-sm text-zinc-400 transition-colors hover:text-white"
+                  >
+                    {label}
+                  </Link>
+                ) : (
+                  <a
+                    href={href}
+                    className="text-sm text-zinc-400 transition-colors hover:text-white"
+                  >
+                    {label}
+                  </a>
+                )}
               </li>
             ))}
           </ul>
@@ -119,7 +129,7 @@ export default function Navbar() {
 
         <nav className="flex flex-1 flex-col justify-between px-6 py-10">
           <ul className="flex flex-col gap-1">
-            {navLinks.map(({ label, href }, i) => (
+            {navLinks.map(({ label, href, type }, i) => (
               <li
                 key={href}
                 className="transition-all duration-300"
@@ -129,13 +139,23 @@ export default function Navbar() {
                   opacity: open ? 1 : 0,
                 }}
               >
-                <a
-                  href={href}
-                  onClick={() => setOpen(false)}
-                  className="flex items-center gap-3 rounded-xl px-4 py-3 text-base font-medium text-zinc-400 transition-colors hover:bg-white/5 hover:text-white"
-                >
-                  {label}
-                </a>
+                {type === "page" ? (
+                  <Link
+                    href={href}
+                    onClick={() => setOpen(false)}
+                    className="flex items-center gap-3 rounded-xl px-4 py-3 text-base font-medium text-zinc-400 transition-colors hover:bg-white/5 hover:text-white"
+                  >
+                    {label}
+                  </Link>
+                ) : (
+                  <a
+                    href={href}
+                    onClick={() => setOpen(false)}
+                    className="flex items-center gap-3 rounded-xl px-4 py-3 text-base font-medium text-zinc-400 transition-colors hover:bg-white/5 hover:text-white"
+                  >
+                    {label}
+                  </a>
+                )}
               </li>
             ))}
           </ul>

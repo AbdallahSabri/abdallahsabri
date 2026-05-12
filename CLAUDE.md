@@ -53,6 +53,7 @@ messages/
 - **Contact API:** In non-production, `/api/contact` returns `{ ok: true }` immediately without sending email (prevents accidental sends during dev).
 - **Locale routing:** Locale is determined from the URL path only; cookie-based locale detection is disabled.
 - **S3 images:** Remote images from `s3.eu-central-1.amazonaws.com/abdallahsabri.com/**` are allowed by `next.config.ts`.
+- **SEO Schemas:** All JSON-LD schemas must be defined in a `seo.ts` file in the same folder as the page route. Import schemas in the page component and inject via `<script type="application/ld+json">` tags. Examples: `src/app/[locale]/projects/clincura/seo.ts`, `src/app/[locale]/projects/level-feedback/seo.ts`.
 
 ## Deployment
 

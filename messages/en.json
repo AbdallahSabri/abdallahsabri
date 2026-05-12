@@ -4,6 +4,7 @@
       "about": "About",
       "services": "Services",
       "work": "Work",
+      "projects": "Projects",
       "experience": "Experience",
       "skills": "Skills",
       "volunteering": "Volunteering",
@@ -129,10 +130,11 @@
         "title": "Clincura",
         "role": "Founder & Architect",
         "period": "Dec 2024 – Present",
-        "description": "An AI-powered clinic management SaaS platform built for multi-clinic operations. Handles scheduling, patient records, billing, and staff management — live with paying clients.",
+        "description": "An AI-powered clinic management SaaS platform built for Clinic operations. Handles scheduling, patient records, billing, and staff management — live with paying clients.",
         "stack": ["React", "NestJS", "TypeScript", "PostgreSQL", "RabbitMQ", "Event Driven Architecture","JWT/RBAC", "OpenAPI", "AWS S3"],
         "tags": ["SaaS Product", "Healthcare Tech", "Founder"],
-        "featured": true
+        "featured": true,
+        "href": "/projects/clincura"
       },
       {
         "title": "Level Feedback",
@@ -141,7 +143,8 @@
         "description": "A platform automating Google Business Profile management and reputation monitoring for small businesses. Built with a focus on simplicity for non-technical SMB owners.",
         "stack": ["Next.js", "Firebase", "Stripe", "Twilio", "RabbitMQ", "Event Driven Architecture","Vercel", "Claude API"],
         "tags": ["SaaS Product", "SMB", "Founder"],
-        "featured": true
+        "featured": true,
+        "href": "/projects/level-feedback"
       },
       {
         "title": "Ride With Via — Full-Stack Engineer",
@@ -368,5 +371,121 @@
       "twitter": "Twitter"
     },
     "copyright": "© {year} {name}. All rights reserved."
+  },
+  "Projects": {
+    "label": "My Products",
+    "heading": "SaaS Products I Founded",
+    "description": "Two products I designed, built, and shipped from zero.",
+    "viewDetails": "View case study →",
+    "items": [
+      {
+        "title": "Clincura",
+        "tagline": "AI-Powered Clinic Management for Clinic Operations",
+        "period": "Dec 2024 – Present",
+        "description": "An AI-powered clinic management SaaS platform built for Clinic operations. Handles scheduling, patient records, billing, and staff management — live with paying clients.",
+        "tags": ["SaaS Product", "Healthcare Tech", "Founder"],
+        "featured": true,
+        "href": "/projects/clincura"
+      },
+      {
+        "title": "Level Feedback",
+        "tagline": "Automated Reputation Management for Small Businesses",
+        "period": "May 2026 – Present",
+        "description": "A platform automating Google Business Profile management and reputation monitoring for small businesses. Built with a focus on simplicity for non-technical SMB owners.",
+        "tags": ["SaaS Product", "SMB", "Founder"],
+        "featured": true,
+        "href": "/projects/level-feedback"
+      }
+    ]
+  },
+  "Clincura": {
+    "label": "Healthcare SaaS",
+    "heading": "Clincura",
+    "tagline": "AI-Powered Clinic Management for Clinic Operations",
+    "period": "Dec 2024 – Present",
+    "tags": ["Founder", "SaaS", "Healthcare Tech"],
+    "ogTitle": "Clincura — AI-Powered Clinic Management SaaS | Abdallah Sabri",
+    "ogDescription": "Built from scratch: a Clinic SaaS with AI scheduling, RBAC, and event-driven architecture.",
+    "ogImageAlt": "Clincura — clinic management SaaS by Abdallah Sabri",
+    "twitterTitle": "Clincura — AI Clinic Management SaaS",
+    "twitterDescription": "Built from scratch: Clinic SaaS with AI scheduling and event-driven architecture.",
+    "problem": {
+      "heading": "The Problem",
+      "body": "Clinics across the region run on paper systems or fragmented point solutions — no unified view of operations, no centralized patient records, and inefficient scheduling that leads to lost revenue and patient frustration."
+    },
+    "features": {
+      "heading": "Key Features",
+      "items": [
+        { "title": "Clinic Management", "description": "Unified dashboard across locations with per-clinic RBAC." },
+        { "title": "AI Scheduling", "description": "Intelligent appointment booking that reduces no-shows." },
+        { "title": "Event-Driven Architecture", "description": "RabbitMQ-backed system for reliable async workflows." },
+        { "title": "OpenAPI-First", "description": "Fully documented REST API for third-party integrations." },
+        { "title": "Role-Based Access Control", "description": "Granular permissions for admins, doctors, and staff." },
+        { "title": "Cloud Storage", "description": "Secure patient documents via AWS S3." }
+      ]
+    },
+    "stack": {
+      "heading": "Tech Stack",
+      "groups": [
+        { "category": "Frontend", "items": ["React", "TypeScript"] },
+        { "category": "Backend", "items": ["NestJS", "TypeScript", "PostgreSQL", "RabbitMQ"] },
+        { "category": "Infrastructure", "items": ["AWS S3", "Docker", "CI/CD"] },
+        { "category": "Auth", "items": ["JWT", "RBAC"] },
+        { "category": "Docs", "items": ["OpenAPI"] }
+      ]
+    },
+    "impact": {
+      "heading": "Results",
+      "metrics": [
+        { "value": "Dec 2024", "label": "First version shipped" },
+        { "value": "Clinic", "label": "Supports multi-location operations" },
+        { "value": "Event-driven", "label": "Async-first architecture from day one" }
+      ]
+    },
+    "cta": { "visitLabel": "Visit Clincura", "backLabel": "← All Projects" }
+  },
+  "LevelFeedback": {
+    "label": "SMB SaaS",
+    "heading": "Level Feedback",
+    "tagline": "Automated Reputation Management for Small Businesses",
+    "period": "May 2026 – Present",
+    "tags": ["Founder", "SaaS", "SMB"],
+    "ogTitle": "Level Feedback — SMB Reputation Management | Abdallah Sabri",
+    "ogDescription": "Automates Google Business Profile management and review monitoring for small businesses.",
+    "twitterTitle": "Level Feedback — SMB Reputation Management",
+    "twitterDescription": "Automated Google Business Profile management and reputation monitoring for SMBs.",
+    "problem": {
+      "heading": "The Problem",
+      "body": "Small businesses lose customers every day because they can't respond fast enough to reviews, can't manage their Google Business Profile effectively, and don't have time for the admin overhead of reputation management. Their competitors with proper review systems are eating their lunch."
+    },
+    "features": {
+      "heading": "Key Features",
+      "items": [
+        { "title": "Google Business Profile Automation", "description": "Auto-publish posts, respond to reviews, and manage Q&A." },
+        { "title": "Review Monitoring", "description": "Real-time alerts for new reviews across platforms." },
+        { "title": "Twilio SMS Campaigns", "description": "Automated SMS follow-ups to collect customer feedback." },
+        { "title": "Stripe Billing", "description": "Subscription management with usage-based tiers." },
+        { "title": "Claude AI Integration", "description": "AI-generated review response drafts." },
+        { "title": "Event-Driven Core", "description": "RabbitMQ + Firebase for reliable async processing." }
+      ]
+    },
+    "stack": {
+      "heading": "Tech Stack",
+      "groups": [
+        { "category": "Frontend", "items": ["Next.js", "TypeScript"] },
+        { "category": "Backend", "items": ["Firebase", "RabbitMQ"] },
+        { "category": "Integrations", "items": ["Stripe", "Twilio", "Claude API", "Google APIs"] },
+        { "category": "Infrastructure", "items": ["Vercel"] }
+      ]
+    },
+    "impact": {
+      "heading": "Results",
+      "metrics": [
+        { "value": "May 2026", "label": "Launched" },
+        { "value": "Claude AI", "label": "AI-powered review responses" },
+        { "value": "Automated", "label": "Full GBP management workflow" }
+      ]
+    },
+    "cta": { "visitLabel": "Visit Level Feedback", "backLabel": "← All Projects" }
   }
 }
