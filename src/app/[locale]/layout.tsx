@@ -7,8 +7,8 @@ import {routing} from "@/i18n/routing";
 import {notFound} from "next/navigation";
 import JsonLd from "@/components/JsonLd";
 
-const geistSans = Geist({variable: "--font-geist-sans", subsets: ["latin"]});
-const geistMono = Geist_Mono({variable: "--font-geist-mono", subsets: ["latin"]});
+const geistSans = Geist({variable: "--font-geist-sans", subsets: ["latin"], display: "swap"});
+const geistMono = Geist_Mono({variable: "--font-geist-mono", subsets: ["latin"], display: "swap"});
 
 const EN_TITLE = "Abdallah Sabri — Senior Software Engineer & Founder";
 const EN_DESC = "Senior Software Engineer for freelance & remote work. Expert in Next.js, Node.js, distributed systems & SEO. Scaled to 1M+ downloads.";
