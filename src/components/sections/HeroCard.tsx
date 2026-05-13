@@ -1,12 +1,14 @@
-import { getLocale, getTranslations } from 'next-intl/server';
+'use client';
+
+import { useLocale, useTranslations } from 'next-intl';
 import Image from "next/image";
 
 const statValues = ['15+', '2', '8+'];
 const statKeys = ['experience', 'saas', 'remote'] as const;
 
-export default async function HeroCard() {
-  const locale = await getLocale();
-  const t = await getTranslations('Hero');
+export default function HeroCard() {
+  const locale = useLocale();
+  const t = useTranslations('Hero');
 
   const stats = statValues.map((value, i) => ({
     value,
