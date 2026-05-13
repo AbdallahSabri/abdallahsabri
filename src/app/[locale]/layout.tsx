@@ -11,7 +11,7 @@ const geistSans = Geist({variable: "--font-geist-sans", subsets: ["latin"]});
 const geistMono = Geist_Mono({variable: "--font-geist-mono", subsets: ["latin"]});
 
 const EN_TITLE = "Abdallah Sabri — Senior Software Engineer & Founder";
-const EN_DESC = "Senior Software Engineer for freelance & remote work. Expert in Next.js, Node.js, distributed systems & SEO. Scaled to 1M+ users.";
+const EN_DESC = "Senior Software Engineer for freelance & remote work. Expert in Next.js, Node.js, distributed systems & SEO. Scaled to 1M+ downloads.";
 const AR_TITLE = "عبدالله صبري — مهندس برمجيات ومؤسس تقني";
 const AR_DESC = "مهندس برمجيات أول للعمل الحر والعمل عن بُعد. متخصص في Next.js وNode.js والأنظمة الموزعة وSEO. أسّس منتجَين SaaS ووصل لمليون مستخدم.";
 

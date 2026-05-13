@@ -3,7 +3,7 @@ const LINKEDIN = "https://linkedin.com/in/abdallahsabri";
 
 const EN_JOB_TITLE = "Senior Software Engineer & Founding Engineer";
 const EN_DESCRIPTION =
-  "I architect distributed backends, lead cross-functional teams, and ship products end-to-end — from early POC to production systems serving real users. I've founded two SaaS products, scaled platforms to 1M+ users, and stepped into founding engineer roles where the job is to build fast, make smart technical bets, and own outcomes — not just write code.";
+  "I architect distributed backends, lead cross-functional teams, and ship products end-to-end — from early POC to production systems serving real users. I've founded two SaaS products, scaled platforms to 1M+ downloads, and stepped into founding engineer roles where the job is to build fast, make smart technical bets, and own outcomes — not just write code.";
 
 const AR_JOB_TITLE = "مهندس برمجيات أول ومؤسس تقني";
 const AR_DESCRIPTION =

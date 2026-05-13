@@ -22,7 +22,7 @@
   {
     "id": "what-has-he-built",
     "question": "What has Abdallah Sabri built?",
-    "answer": "Abdallah has built systems serving 1M+ users at Safarway, reduced API response times by 97% at Ride With Via, consolidated 5 legacy notification services at Zencity, and founded two SaaS products: Clincura (AI-powered clinic management) and Level Feedback (reputation management for SMBs)."
+    "answer": "Abdallah has built systems serving 1M+ downloads at Safarway, reduced API response times by 97% at Ride With Via, consolidated 5 legacy notification services at Zencity, and founded two SaaS products: Clincura (AI-powered clinic management) and Level Feedback (reputation management for SMBs)."
   },
   {
     "id": "engineering-team-lead",
@@ -35,9 +35,9 @@
     "answer": "At Ride With Via, migrating from a Lambda-based BFF to a modular NestJS service reduced response times by 97% — from 1–2 minutes to under 2 seconds. Key factors were eliminating cold starts, reducing unnecessary service hops, and optimizing data aggregation logic at the BFF layer."
   },
   {
-    "id": "scale-nodejs-1m-users",
-    "question": "How do you scale a Node.js backend to 1 million users?",
-    "answer": "Scaling to 1M+ users requires horizontal scaling, stateless services, efficient caching with Redis, database indexing and query optimization, async processing via message queues, and independent microservices that scale based on load. At Safarway, this architecture supported 1M users and 100k+ property listings."
+    "id": "scale-nodejs-1m-download",
+    "question": "How do you scale a Node.js backend to 1 million download?",
+    "answer": "Scaling to 1M+ download dedicated team efforts, requires horizontal scaling, stateless services, efficient caching with Redis, database indexing and query optimization, async processing via message queues, and independent microservices that scale based on load. At Safarway, this architecture supported 1M users and 100k+ property listings."
   },
   {
     "id": "solo-saas-founder",
