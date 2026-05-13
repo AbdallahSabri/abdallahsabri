@@ -77,7 +77,7 @@ I don't just write code. I contribute to building the product, the team, and the
 I invest in people. Currently:
 
 - **President** — Afaq Toastmasters Club — Leading operations and member development in public speaking and leadership.
-- **Secretary & Board Member** — Silwad Students Association — Managing operations and supporting student community initiatives.
+- **Secretary & Board Member** — Silwad Students Association — Managing operations and supporting university student financially and in soft skills.
 
 ---
 
@@ -85,12 +85,12 @@ I invest in people. Currently:
 
 Looking to hire, collaborate, or explore a project? I'm open to remote work worldwide and relocation opportunities, particularly in Europe.
 
-- **Email:** [info@abdallahsabri.com](mailto:info@abdallahsabri.com)
-- **LinkedIn:** [linkedin.com/in/abdallah-sabri](https://linkedin.com/in/abdallah-sabri)
-- **Schedule:** [calendly.com/abdallah-sabri](https://calendly.com/abdallah-sabri)
+- **Email:** <a href="mailto:info@abdallahsabri.com" target="_blank" rel="noopener noreferrer">info@abdallahsabri.com</a>
+- **LinkedIn:** <a href="https://linkedin.com/in/abdallah-sabri" target="_blank" rel="noopener noreferrer">linkedin.com/in/abdallah-sabri</a>
+- **Schedule:** <a href="https://calendly.com/abdallah-sabri" target="_blank" rel="noopener noreferrer">calendly.com/abdallah-sabri</a>
 - **Location:** Ramallah, Palestine — Open to Remote & Relocation
 
-I typically respond within 24–48 hours. For urgent enquiries, [WhatsApp](https://wa.me/970592090780) is fastest.
+I typically respond within 24–48 hours. For urgent enquiries, <a href="https://wa.me/970592090780" target="_blank" rel="noopener noreferrer">WhatsApp</a> is fastest.
 
 ---
 
