@@ -24,6 +24,8 @@ export default function HeroCard() {
           <Image
             src="https://d3l0mjyonoq4zj.cloudfront.net/abdallah00029.png"
             priority
+            decoding={"sync"}
+            fetchPriority={"high"}
             width={500}
             height={300}
             alt={
