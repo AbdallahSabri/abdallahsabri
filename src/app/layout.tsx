@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { GoogleAnalytics } from "@next/third-parties/google";
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://abdallahsabri.com"),
@@ -17,7 +18,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     <>
       {children}
       {env === 'production' && gaId && (
-        <GoogleAnalytics gaId={gaId} />
+        <>
+          <SpeedInsights />
+          <GoogleAnalytics gaId={gaId} />
+        </>
       )}
     </>
   );

@@ -1,6 +1,7 @@
 'use client';
 
 import { useLocale, useTranslations } from 'next-intl';
+import Image from "next/image";
 
 const statValues = ['15+', '2', '8+'];
 const statKeys = ['experience', 'saas', 'remote'] as const;
@@ -20,8 +21,9 @@ export default function HeroCard() {
         {/* Photo area with radial glow */}
         <div className="relative flex h-[300px] items-end justify-center overflow-hidden rounded-2xl">
           <div className="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full blur-[90px] bg-[#7B61FF]/50" />
-          <img
+          <Image
             src="https://s3.eu-central-1.amazonaws.com/abdallahsabri.com/images/abdallah00029.png"
+            priority
             alt={
               locale === 'ar'
                 ? 'عبدالله صبري — مهندس برمجيات أول ومؤسس تقني'
