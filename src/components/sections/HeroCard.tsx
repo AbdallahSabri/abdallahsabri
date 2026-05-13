@@ -24,14 +24,14 @@ export default function HeroCard() {
           <Image
             src="https://d3l0mjyonoq4zj.cloudfront.net/abdallah00029.png"
             priority
-            width={240}
-            height={320}
+            width={500}
+            height={300}
             alt={
               locale === 'ar'
                 ? 'عبدالله صبري — مهندس برمجيات أول ومؤسس تقني'
                 : 'Abdallah Sabri — Senior Software Engineer and Founding Engineer'
             }
-            className="relative z-10 h-80 w-[240px] max-w-none object-contain object-bottom"
+            className="relative z-10 h-[300px] w-auto max-w-none object-contain object-bottom"
           />
         </div>
 
