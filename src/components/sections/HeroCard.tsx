@@ -22,14 +22,16 @@ export default function HeroCard() {
         <div className="relative flex h-[300px] items-end justify-center overflow-hidden rounded-2xl">
           <div className="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full blur-[90px] bg-[#7B61FF]/50" />
           <Image
-            src="https://s3.eu-central-1.amazonaws.com/abdallahsabri.com/images/abdallah00029.png"
+            src="https://d3l0mjyonoq4zj.cloudfront.net/abdallah00029.png"
             priority
+            width={240}
+            height={320}
             alt={
               locale === 'ar'
                 ? 'عبدالله صبري — مهندس برمجيات أول ومؤسس تقني'
                 : 'Abdallah Sabri — Senior Software Engineer and Founding Engineer'
             }
-            className="relative z-10 h-80 w-auto max-w-none object-contain object-bottom"
+            className="relative z-10 h-80 w-[240px] max-w-none object-contain object-bottom"
           />
         </div>
 
