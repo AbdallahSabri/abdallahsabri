@@ -1,14 +1,12 @@
-'use client';
-
-import { useLocale, useTranslations } from 'next-intl';
+import { getLocale, getTranslations } from 'next-intl/server';
 import Image from "next/image";
 
 const statValues = ['15+', '2', '8+'];
 const statKeys = ['experience', 'saas', 'remote'] as const;
 
-export default function HeroCard() {
-  const locale = useLocale();
-  const t = useTranslations('Hero');
+export default async function HeroCard() {
+  const locale = await getLocale();
+  const t = await getTranslations('Hero');
 
   const stats = statValues.map((value, i) => ({
     value,
@@ -28,7 +26,7 @@ export default function HeroCard() {
             height={300}
             alt={
               locale === 'ar'
-                ? 'عبدالله صبري — مهندس برمجيات أول ومؤسس تقني'
+                ? 'عبدالله صبري — مهندس برمجيات ومؤسس تقني'
                 : 'Abdallah Sabri — Senior Software Engineer and Founding Engineer'
             }
             className="relative z-10 h-[300px] w-auto max-w-none object-contain object-bottom"

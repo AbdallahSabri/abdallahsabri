@@ -1,4 +1,5 @@
 import { getTranslations, getLocale } from "next-intl/server";
+import HeroCard from "./HeroCard";
 import HeroCardSlot from "./HeroCardSlot";
 
 export default async function Hero() {
@@ -38,7 +39,7 @@ export default async function Hero() {
               </span>
             ))}
           </div>
-          <HeroCardSlot position="mobile" />
+          <HeroCardSlot position="mobile"><HeroCard /></HeroCardSlot>
           <p className="mb-4 text-lg leading-relaxed text-zinc-300">
             {t("subtitle")}
           </p>
@@ -65,7 +66,7 @@ export default async function Hero() {
           <p className="text-sm text-zinc-500">{t("location")}</p>
         </div>
 
-        <HeroCardSlot position="desktop" />
+        <HeroCardSlot position="desktop"><HeroCard /></HeroCardSlot>
       </div>
     </section>
   );

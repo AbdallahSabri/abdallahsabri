@@ -1,15 +1,16 @@
 'use client';
 
 import { useIsMobile } from '@/hooks/useIsMobile';
-import HeroCard from './HeroCard';
+import { ReactNode } from 'react';
 
 type Props = {
   position: 'mobile' | 'desktop';
+  children: ReactNode;
 };
 
-export default function HeroCardSlot({ position }: Props) {
+export default function HeroCardSlot({ position, children }: Props) {
   const isMobile = useIsMobile();
   if (position === 'mobile' && !isMobile) return null;
   if (position === 'desktop' && isMobile) return null;
-  return <HeroCard />;
+  return <>{children}</>;
 }
