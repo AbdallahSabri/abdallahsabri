@@ -1,0 +1,23 @@
+# Abdallah Sabri — abdallahsabri.com
+
+> Senior Software Engineer specializing in Node.js, TypeScript, NestJS, and AWS.
+> Founder of Clincura and Level Feedback.
+> Based in Ramallah, Palestine. Available for remote roles and EU relocation.
+
+## About
+- [About Abdallah Sabri](https://abdallahsabri.com/en/about)
+
+## Projects
+- [Clincura — AI-powered clinic management SaaS](https://abdallahsabri.com/en/projects/clincura)
+- [Level Feedback — Reputation management for SMBs](https://abdallahsabri.com/en/projects/level-feedback)
+
+## Blog
+- [From Monolith to Microservices: My Journey at Safarway](https://abdallahsabri.com/en/blog/from-monolith-to-microservices)
+
+## FAQ
+- [Frequently Asked Questions](https://abdallahsabri.com/en/faq)
+
+## Contact
+- Email: abdallah.silwad@gmail.com
+- LinkedIn: https://linkedin.com/in/abdallah-sabri
+- GitHub: https://github.com/AbdallahSabri

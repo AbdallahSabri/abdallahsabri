@@ -42,9 +42,9 @@ export default function Navbar() {
           className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4"
           aria-label="Main navigation"
         >
-          <a href="#hero" className="text-lg font-bold tracking-tight text-white">
-            Abdallah Sabri
-          </a>
+          <Link href="/" className="text-lg font-bold tracking-tight text-white">
+            {t("name")}
+          </Link>
 
           {/* Desktop nav */}
           <ul className="hidden items-center gap-8 md:flex">
@@ -119,13 +119,13 @@ export default function Navbar() {
         }`}
       >
         <div className="flex h-[73px] items-center justify-between border-b border-white/5 px-6">
-          <a
-            href="#hero"
+          <Link
+            href="/"
             className="text-lg font-bold tracking-tight text-white"
             onClick={() => setOpen(false)}
           >
-            Abdallah Sabri
-          </a>
+            {t("name")}
+          </Link>
         </div>
 
         <nav className="flex flex-1 flex-col justify-between px-6 py-10">
