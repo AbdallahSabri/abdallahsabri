@@ -18,18 +18,24 @@ export default function Navbar() {
     };
   }, [open]);
 
-  const navLinks = [
+  const homepageNavLinks = [
     { label: t("links.about"), href: "#about", type: "anchor" },
     { label: t("links.services"), href: "#services", type: "anchor" },
     { label: t("links.work"), href: "#work", type: "anchor" },
-    { label: t("links.projects"), href: "/projects", type: "page" },
-    { label: t("links.faq"), href: "/faq", type: "page" },
     { label: t("links.experience"), href: "#experience", type: "anchor" },
     { label: t("links.skills"), href: "#skills", type: "anchor" },
     { label: t("links.volunteering"), href: "#volunteering", type: "anchor" },
-    { label: t("links.smb"), href: "#smb", type: "anchor" },
     { label: t("links.contact"), href: "#contact", type: "anchor" },
   ];
+
+  const internalPagesNavLinks = [
+    { label: t("links.blog"), href: "/blog", type: "page" },
+    { label: t("links.projects"), href: "/projects", type: "page" },
+    { label: t("links.faq"), href: "/faq", type: "page" },
+    { label: t("links.about"), href: "/about", type: "page" },
+  ];
+
+  const navLinks = pathname === "/" ? homepageNavLinks : internalPagesNavLinks;
 
   const switchLocale = () => {
     router.replace(pathname, { locale: locale === "en" ? "ar" : "en" });
