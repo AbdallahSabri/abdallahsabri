@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
 
+export const defaultOgImage = "og-image.png";
+export const defaultFullOgImage = `https://abdallahsabri.com/${defaultOgImage}`;
+
 export const siteConfig = {
   name: "Abdallah Sabri",
   title: "Abdallah Sabri — Senior Software Engineer & Founding Engineer",
   description:
     "Full-stack developer specializing in modern web applications. Building fast, scalable, and beautiful digital experiences.",
   url: "https://abdallahsabri.com",
-  ogImage: "https://abdallahsabri.com/og-image.png",
+  ogImage: defaultFullOgImage,
   twitterHandle: "@abdallahsabri",
 };
 

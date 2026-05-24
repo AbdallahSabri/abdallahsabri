@@ -6,6 +6,7 @@ import {NextIntlClientProvider} from "next-intl";
 import {routing} from "@/i18n/routing";
 import {notFound} from "next/navigation";
 import JsonLd from "@/components/JsonLd";
+import {defaultFullOgImage} from "@/lib/metadata";
 
 const geistSans = Geist({variable: "--font-geist-sans", subsets: ["latin"], display: "swap"});
 const geistMono = Geist_Mono({variable: "--font-geist-mono", subsets: ["latin"], display: "swap"});
@@ -69,7 +70,7 @@ export async function generateMetadata({ params }: GenerateMetadataProps): Promi
       alternateLocale: isAr ? "en_US" : "ar_AR",
       images: [
         {
-          url: "https://abdallahsabri.com/og-image.png",
+          url: defaultFullOgImage,
           width: 1200,
           height: 630,
           alt: title,
@@ -83,7 +84,7 @@ export async function generateMetadata({ params }: GenerateMetadataProps): Promi
       creator: "@abdallahsabri",
       images: [
         {
-          url: "https://abdallahsabri.com/og-image.png",
+          url: defaultFullOgImage,
           width: 1200,
           height: 630,
           alt: title,

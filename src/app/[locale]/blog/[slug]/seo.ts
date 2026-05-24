@@ -1,4 +1,5 @@
 import type { BlogPostMeta } from "@/lib/blog";
+import { defaultOgImage } from "@/lib/metadata";
 
 const BASE = "https://abdallahsabri.com";
 
@@ -28,7 +29,7 @@ export function getBlogSchemas(post: BlogPostMeta) {
     datePublished: new Date(post.date).toISOString(),
     keywords: post.tags.join(", "),
     author: { "@id": `${BASE}#person` },
-    image: post.image ?? `${BASE}/og-image.png`,
+    image: post.image ?? `${BASE}/${defaultOgImage}`,
   };
 
   return { breadcrumbSchema, articleSchema };

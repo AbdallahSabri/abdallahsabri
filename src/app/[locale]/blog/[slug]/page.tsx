@@ -79,7 +79,7 @@ export default async function BlogPostPage({ params }: Props) {
       <Navbar />
       <main>
         <article className="section-padding" aria-labelledby="post-heading">
-          <div dir="ltr" className="mx-auto max-w-3xl">
+          <ul dir="ltr" className="mx-auto max-w-3xl">
             <Link
               href="/blog"
               className="mb-10 inline-flex items-center gap-1.5 text-sm text-zinc-500 transition-colors hover:text-zinc-300"
@@ -97,7 +97,7 @@ export default async function BlogPostPage({ params }: Props) {
                     {tag}
                   </li>
                 ))}
-              </div>
+              </ul>
               <h1
                 id="post-heading"
                 className="mb-5 text-4xl font-bold leading-tight tracking-tight text-white"
@@ -141,7 +141,7 @@ export default async function BlogPostPage({ params }: Props) {
               />
             </div>
             <AuthorBio />
-          </div>
+          </ul>
         </article>
       </main>
       <Footer />

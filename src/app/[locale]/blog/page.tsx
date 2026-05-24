@@ -6,6 +6,7 @@ import ScrollToTop from "@/components/ui/ScrollToTop";
 import SectionLabel from "@/components/ui/SectionLabel";
 import { Link } from "@/i18n/routing";
 import { getAllPosts } from "@/lib/blog";
+import {defaultFullOgImage} from "@/lib/metadata";
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("Blog");
@@ -20,7 +21,7 @@ export async function generateMetadata(): Promise<Metadata> {
       type: "website",
       images: [
         {
-          url: "https://abdallahsabri.com/og-image.png",
+          url: defaultFullOgImage,
           width: 1200,
           height: 630,
           alt: "Blog — Abdallah Sabri",

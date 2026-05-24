@@ -5,6 +5,7 @@ import ScrollToTop from "@/components/ui/ScrollToTop";
 import SectionLabel from "@/components/ui/SectionLabel";
 import Footer from "@/components/sections/Footer";
 import { Link } from "@/i18n/routing";
+import {defaultFullOgImage} from "@/lib/metadata";
 
 type ProjectItem = {
   title: string;
@@ -29,7 +30,7 @@ export async function generateMetadata(): Promise<Metadata> {
       type: "website",
       images: [
         {
-          url: "https://abdallahsabri.com/og-image.png",
+          url: defaultFullOgImage,
           width: 1200,
           height: 630,
           alt: "Projects — Abdallah Sabri",
