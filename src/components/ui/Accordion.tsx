@@ -32,7 +32,7 @@ export default function Accordion({ question, answer }: AccordionProps) {
       <div
         className={`overflow-hidden transition-all duration-200 ${open ? "max-h-[600px]" : "max-h-0"}`}
       >
-        <p className="px-6 pb-5 text-sm leading-relaxed text-zinc-400">{answer}</p>
+        <p className="px-6 py-5 text-sm leading-relaxed text-zinc-400 border-t">{answer}</p>
       </div>
     </div>
   );
