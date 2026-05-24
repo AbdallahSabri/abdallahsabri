@@ -137,9 +137,9 @@ export default async function ProjectsPage() {
                       : "border-white/5 bg-[#18181b] hover:border-white/10"
                   }`}
                 >
-                  <div className="mb-4 flex flex-wrap gap-2">
+                  <ul role="list" className="mb-4 flex flex-wrap gap-2">
                     {tags.map((tag) => (
-                      <span
+                      <li
                         key={tag}
                         className={`rounded-full px-2.5 py-0.5 text-xs font-medium ${
                           tag === "Founder" || tag === "مؤسّس"
@@ -148,9 +148,9 @@ export default async function ProjectsPage() {
                         }`}
                       >
                         {tag}
-                      </span>
+                      </li>
                     ))}
-                  </div>
+                  </ul>
 
                   <h2 className="mb-1 text-2xl font-semibold text-white">{title}</h2>
 

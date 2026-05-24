@@ -15,7 +15,8 @@
     },
     "cta": "Hire me",
     "openMenu": "Open menu",
-    "closeMenu": "Close menu"
+    "closeMenu": "Close menu",
+    "skipToMainContent": "Skip to main content"
   },
   "Hero": {
     "badge": "Available for Work",
@@ -33,7 +34,7 @@
     "description": "I love the journey that's still taking shape, when the picture isn't fully clear, the team is small, and every decision carries weight. I don't just write code, I contribute to building the product, the team, and the technical foundation from the ground up. I'm now looking for the next challenge with a team that has real ambition and is looking for someone to build alongside them and own the outcome fully.",
     "cta": "Hire Me",
     "ctaWork": "See My Work",
-    "location": "📍 Ramallah, Palestine — Open to Remote Worldwide & Relocation",
+    "location": "Ramallah, Palestine — Open to Remote Worldwide & Relocation",
     "photoSoon": "Photo coming soon",
     "stats": {
       "experience": "Years Experience",

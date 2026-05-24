@@ -49,7 +49,7 @@ export default async function AboutPage() {
       />
 
       <Navbar />
-      <main>
+      <main id="main-content">
         <About />
 
         <div

@@ -29,16 +29,16 @@ export default async function Hero() {
             </span>
           </h1>
 
-          <div className="mb-4 flex flex-wrap gap-2">
+          <ul role="list" className="mb-4 flex flex-wrap gap-2">
             {(t.raw("skills") as string[]).map((skill) => (
-              <span
+              <li
                 key={skill}
                 className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-sm font-medium text-zinc-300"
               >
                 {skill}
-              </span>
+              </li>
             ))}
-          </div>
+          </ul>
           <HeroCardSlot position="mobile"><HeroCard /></HeroCardSlot>
           <p className="mb-4 text-lg leading-relaxed text-zinc-300">
             {t("subtitle")}
@@ -63,7 +63,9 @@ export default async function Hero() {
             </a>
           </div>
 
-          <p className="text-sm text-zinc-500">{t("location")}</p>
+          <p className="text-sm text-zinc-500">
+            <span aria-hidden="true">📍 </span>{t("location")}
+          </p>
         </div>
 
         <HeroCardSlot position="desktop"><HeroCard /></HeroCardSlot>

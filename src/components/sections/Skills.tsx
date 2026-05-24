@@ -31,16 +31,16 @@ export default async function Skills() {
               <p className="mb-4 text-xs font-semibold tracking-widest text-indigo-400 uppercase">
                 {category}
               </p>
-              <div className="flex flex-wrap gap-2">
+              <ul role="list" className="flex flex-wrap gap-2">
                 {skills.map((skill) => (
-                  <span
+                  <li
                     key={skill}
                     className="rounded-full border border-white/5 bg-white/5 px-3 py-1 text-xs text-zinc-300"
                   >
                     {skill}
-                  </span>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           ))}
         </div>

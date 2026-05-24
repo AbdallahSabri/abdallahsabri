@@ -88,14 +88,14 @@ export default async function BlogPostPage({ params }: Props) {
             </Link>
 
             <header className="mb-12">
-              <div className="mb-4 flex flex-wrap gap-2">
+              <ul role="list" className="mb-4 flex flex-wrap gap-2">
                 {post.tags.map((tag) => (
-                  <span
+                  <li
                     key={tag}
                     className="rounded-full bg-white/5 px-2.5 py-0.5 text-xs font-medium text-zinc-400"
                   >
                     {tag}
-                  </span>
+                  </li>
                 ))}
               </div>
               <h1

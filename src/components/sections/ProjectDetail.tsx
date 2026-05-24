@@ -89,16 +89,16 @@ export default function ProjectDetail({
 
             <div className="mt-6 flex flex-wrap items-center gap-4">
               <span className="text-sm text-zinc-500">{period}</span>
-              <div className="flex flex-wrap gap-2">
+              <ul role="list" className="flex flex-wrap gap-2">
                 {tags.map((tag) => (
-                  <span
+                  <li
                     key={tag}
                     className="rounded-full bg-indigo-500/15 px-3 py-1 text-xs font-medium text-indigo-300"
                   >
                     {tag}
-                  </span>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           </div>
         </div>
@@ -154,16 +154,16 @@ export default function ProjectDetail({
                 <h3 className="text-sm font-semibold uppercase tracking-widest text-indigo-400">
                   {group.category}
                 </h3>
-                <div className="mt-4 flex flex-wrap gap-2">
+                <ul role="list" className="mt-4 flex flex-wrap gap-2">
                   {group.items.map((item) => (
-                    <span
+                    <li
                       key={item}
                       className="rounded-md bg-white/5 px-2.5 py-1.5 font-mono text-xs text-zinc-400"
                     >
                       {item}
-                    </span>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
             ))}
           </div>

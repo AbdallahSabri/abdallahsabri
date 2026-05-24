@@ -37,6 +37,13 @@ export default function Navbar() {
 
   return (
     <>
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:start-4 focus:z-[100] focus:rounded-lg focus:bg-indigo-500 focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-white"
+      >
+        {t("skipToMainContent")}
+      </a>
+
       <header className="fixed top-0 z-50 w-full border-b border-white/5 bg-[#0f0f0f]/80 backdrop-blur-md">
         <nav
           className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4"
@@ -73,6 +80,7 @@ export default function Navbar() {
           <div className="hidden items-center gap-3 md:flex">
             <button
               onClick={switchLocale}
+              lang="en"
               className="rounded-full border border-white/10 px-3 py-1.5 text-xs font-medium text-zinc-400 transition-colors hover:border-white/30 hover:text-white"
               aria-label={locale === "en" ? "Switch to Arabic" : "Switch to English"}
             >
@@ -117,6 +125,7 @@ export default function Navbar() {
         role="dialog"
         aria-modal="true"
         aria-label={t("openMenu")}
+        aria-hidden={!open}
         className={`fixed inset-0 z-40 flex flex-col bg-[#0f0f0f] transition-opacity duration-300 md:hidden ${
           open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         }`}
@@ -167,9 +176,14 @@ export default function Navbar() {
           <div className="mt-8 flex flex-col gap-3">
             <button
               onClick={() => { switchLocale(); setOpen(false); }}
+              lang="en"
+              aria-label={locale === "en" ? "Switch to Arabic" : "Switch to English"}
               className="rounded-full border border-white/10 py-3 text-sm font-medium text-zinc-400 transition-colors hover:border-white/30 hover:text-white"
             >
-              {locale === "en" ? "العربية" : "English"}
+              {locale === "en"
+                ? <span lang="ar">العربية</span>
+                : <span lang="en">English</span>
+              }
             </button>
             <a
               href="#contact"

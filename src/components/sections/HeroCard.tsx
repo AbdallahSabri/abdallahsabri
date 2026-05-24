@@ -38,19 +38,17 @@ export default function HeroCard() {
         </div>
 
         {/* Metric cards */}
-        <div className="grid grid-cols-3 gap-3">
+        <dl className="grid grid-cols-3 gap-3">
           {stats.map((stat) => (
             <div
               key={stat.label}
-              className="rounded-xl border border-white/[0.05] bg-[#0F0F12] px-3 py-4 text-center"
+              className="flex flex-col rounded-xl border border-white/[0.05] bg-[#0F0F12] px-3 py-4 text-center"
             >
-              <p className="text-2xl font-bold text-white">{stat.value}</p>
-              <p className="mt-1 text-xs leading-snug text-zinc-500">
-                {stat.label}
-              </p>
+              <dt className="order-2 mt-1 text-xs leading-snug text-zinc-500">{stat.label}</dt>
+              <dd className="order-1 text-2xl font-bold text-white">{stat.value}</dd>
             </div>
           ))}
-        </div>
+        </dl>
       </div>
     </div>
   );

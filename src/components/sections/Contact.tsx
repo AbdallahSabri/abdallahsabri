@@ -128,26 +128,28 @@ export default function Contact() {
             <div className="grid gap-4 sm:grid-cols-2">
               <div>
                 <label htmlFor="full-name" className={labelClass}>
-                  {t("form.fullName")} <span className="text-indigo-400">*</span>
+                  {t("form.fullName")} <span className="text-indigo-400" aria-hidden="true">*</span>
                 </label>
                 <input
                   id="full-name"
                   type="text"
                   autoComplete="name"
                   required
+                  aria-required="true"
                   placeholder="Jane Smith"
                   className={inputClass}
                 />
               </div>
               <div>
                 <label htmlFor="email" className={labelClass}>
-                  {t("form.emailAddress")} <span className="text-indigo-400">*</span>
+                  {t("form.emailAddress")} <span className="text-indigo-400" aria-hidden="true">*</span>
                 </label>
                 <input
                   id="email"
                   type="email"
                   autoComplete="email"
                   required
+                  aria-required="true"
                   placeholder="jane@example.com"
                   className={inputClass}
                 />
@@ -170,11 +172,12 @@ export default function Contact() {
 
             <div>
               <label htmlFor="topic" className={labelClass}>
-                {t("form.topic")} <span className="text-indigo-400">*</span>
+                {t("form.topic")} <span className="text-indigo-400" aria-hidden="true">*</span>
               </label>
               <select
                 id="topic"
                 required
+                aria-required="true"
                 defaultValue=""
                 className={`${inputClass} cursor-pointer appearance-none`}
               >

@@ -46,9 +46,9 @@ export default async function Work() {
                   : "border-white/5 bg-[#0f0f0f] hover:border-white/10"
               }`}
             >
-              <div className="mb-4 flex flex-wrap gap-2">
+              <ul role="list" className="mb-4 flex flex-wrap gap-2">
                 {tags.map((tag) => (
-                  <span
+                  <li
                     key={tag}
                     className={`rounded-full px-2.5 py-0.5 text-xs font-medium ${
                       tag === "Founder" || tag === "مؤسّس"
@@ -57,9 +57,9 @@ export default async function Work() {
                     }`}
                   >
                     {tag}
-                  </span>
+                  </li>
                 ))}
-              </div>
+              </ul>
 
               <h3 className="mb-1 text-lg font-semibold text-white">{title}</h3>
 
@@ -73,16 +73,16 @@ export default async function Work() {
                 {description}
               </p>
 
-              <div className="flex flex-wrap gap-2">
+              <ul role="list" className="flex flex-wrap gap-2">
                 {stack.map((tech) => (
-                  <span
+                  <li
                     key={tech}
                     className="rounded-md bg-white/5 px-2 py-0.5 font-mono text-xs text-zinc-500"
                   >
                     {tech}
-                  </span>
+                  </li>
                 ))}
-              </div>
+              </ul>
 
               {href && (
                 <a

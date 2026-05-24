@@ -112,16 +112,16 @@ export default async function BlogPage() {
                     href={`/blog/${post.slug}`}
                     className="group flex flex-col rounded-2xl border border-white/5 bg-[#18181b] p-6 transition-colors hover:border-white/10"
                   >
-                    <div className="mb-3 flex flex-wrap gap-2">
+                    <ul role="list" className="mb-3 flex flex-wrap gap-2">
                       {post.tags.map((tag) => (
-                        <span
+                        <li
                           key={tag}
                           className="rounded-full bg-white/5 px-2.5 py-0.5 text-xs font-medium text-zinc-400"
                         >
                           {tag}
-                        </span>
+                        </li>
                       ))}
-                    </div>
+                    </ul>
 
                     <h2 className="mb-2 text-xl font-semibold text-white transition-colors group-hover:text-indigo-300">
                       {post.title}
