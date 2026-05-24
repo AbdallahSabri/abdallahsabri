@@ -114,11 +114,14 @@ export default function Navbar() {
 
       {/* Mobile drawer */}
       <div
+        role="dialog"
+        aria-modal="true"
+        aria-label={t("openMenu")}
         className={`fixed inset-0 z-40 flex flex-col bg-[#0f0f0f] transition-opacity duration-300 md:hidden ${
           open ? "pointer-events-auto opacity-100" : "pointer-events-none opacity-0"
         }`}
       >
-        <div className="flex h-[73px] items-center justify-between border-b border-white/5 px-6">
+        <header className="flex h-[73px] items-center justify-between border-b border-white/5 px-6">
           <Link
             href="/"
             className="text-lg font-bold tracking-tight text-white"
@@ -126,7 +129,7 @@ export default function Navbar() {
           >
             {t("name")}
           </Link>
-        </div>
+        </header>
 
         <nav className="flex flex-1 flex-col justify-between px-6 py-10">
           <ul className="flex flex-col gap-1">
