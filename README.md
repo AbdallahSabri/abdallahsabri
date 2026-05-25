@@ -83,7 +83,7 @@ I invest in people. Currently:
 
 ## Let's Talk
 
-Looking to hire, collaborate, or explore a project? I'm open to remote work worldwide and relocation opportunities, particularly in Europe.
+Looking to hire, collaborate, or explore a project? I'm open to remote work worldwide and relocation opportunities, particularly in Saudi Arabia, UAE, or Oman.
 
 - **Email:** <a href="mailto:info@abdallahsabri.com" target="_blank" rel="noopener noreferrer">info@abdallahsabri.com</a>
 - **LinkedIn:** <a href="https://linkedin.com/in/abdallah-sabri" target="_blank" rel="noopener noreferrer">linkedin.com/in/abdallah-sabri</a>

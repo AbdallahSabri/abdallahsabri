@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { siteConfig } from "@/lib/metadata";
 import { WhatsAppIcon, LinkedInIcon, InstagramIcon } from "@/components/ui/icons";
 import type { ComponentType } from "react";
+import {Link} from "@/i18n/routing";
 
 const socialHrefs = {
   whatsapp: "https://wa.me/970592090780",
@@ -38,9 +39,9 @@ export default async function Footer() {
       <div className="mx-auto max-w-6xl">
         <div className="flex flex-col items-center justify-between gap-8 md:flex-row">
           <div>
-            <a href="#hero" className="text-lg font-bold tracking-tight text-white">
-              Abdallah Sabri
-            </a>
+            <Link href="/" className="text-lg font-bold tracking-tight text-white">
+              {t("name")}
+            </Link>
             {/*<p className="mt-1 text-sm text-zinc-500">{siteConfig.description}</p>*/}
           </div>
 
