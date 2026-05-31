@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Navbar from "@/components/sections/Navbar";
 import ScrollToTop from "@/components/ui/ScrollToTop";
 import Hero from "@/components/sections/Hero";
@@ -9,6 +10,19 @@ import Skills from "@/components/sections/Skills";
 import Volunteering from "@/components/sections/Volunteering";
 import Contact from "@/components/sections/Contact";
 import Footer from "@/components/sections/Footer";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ locale: string }>;
+}): Promise<Metadata> {
+  const { locale } = await params;
+  return {
+    alternates: {
+      canonical: locale === "en" ? "https://abdallahsabri.com" : `https://abdallahsabri.com/${locale}`,
+    },
+  };
+}
 
 export default function Home() {
   return (
