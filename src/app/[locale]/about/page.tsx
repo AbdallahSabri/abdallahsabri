@@ -8,16 +8,20 @@ import Experience from "@/components/sections/Experience";
 import Image from "next/image";
 import { getPersonSchema } from "./seo";
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
   const t = await getTranslations("About");
 
   return {
     title: t("label"),
     description: t("headingPart1"),
+    alternates: {
+      canonical: `https://abdallahsabri.com/${locale}/about`,
+    },
     openGraph: {
       title: t("ogTitle"),
       description: t("ogDescription"),
-      url: "https://abdallahsabri.com/about",
+      url: `https://abdallahsabri.com/${locale}/about`,
       type: "profile",
       images: [
         {
