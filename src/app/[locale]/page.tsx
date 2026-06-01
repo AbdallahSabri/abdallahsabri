@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { defaultMetadata } from "@/lib/metadata";
 import Navbar from "@/components/sections/Navbar";
 import ScrollToTop from "@/components/ui/ScrollToTop";
 import Hero from "@/components/sections/Hero";
@@ -18,6 +19,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { locale } = await params;
   return {
+    ...defaultMetadata,
     alternates: {
       canonical: `https://abdallahsabri.com/${locale}`,
       languages: {
