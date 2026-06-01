@@ -19,7 +19,12 @@ export async function generateMetadata({
   const { locale } = await params;
   return {
     alternates: {
-      canonical: locale === "en" ? "https://abdallahsabri.com" : `https://abdallahsabri.com/${locale}`,
+      canonical: `https://abdallahsabri.com/${locale}`,
+      languages: {
+        en: "https://abdallahsabri.com/en",
+        ar: "https://abdallahsabri.com/ar",
+        "x-default": "https://abdallahsabri.com/en",
+      },
     },
   };
 }

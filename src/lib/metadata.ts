@@ -81,11 +81,10 @@ export const defaultMetadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://abdallahsabri.com/en',
     languages: {
       'en-US': 'https://abdallahsabri.com/en',
       'ar-SA': 'https://abdallahsabri.com/ar',
-      'x-default': 'https://abdallahsabri.com/en', // fallback
+      'x-default': 'https://abdallahsabri.com/en',
     },
   },
 };

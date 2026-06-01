@@ -11,7 +11,8 @@ import arItems from "../../../../content/faq/ar.json";
 
 const itemsMap = { en: enItems, ar: arItems };
 
-export async function generateMetadata(): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
   const t = await getTranslations("FAQ");
 
   return {
@@ -22,10 +23,10 @@ export async function generateMetadata(): Promise<Metadata> {
       ...defaultMetadata.openGraph,
       title: t("heading"),
       description: t("description"),
-      url: "https://abdallahsabri.com/faq",
+      url: `https://abdallahsabri.com/${locale}/faq`,
     },
     alternates: {
-      canonical: "https://abdallahsabri.com/en/faq",
+      canonical: `https://abdallahsabri.com/${locale}/faq`,
       languages: {
         "en-US": "https://abdallahsabri.com/en/faq",
         "ar-SA": "https://abdallahsabri.com/ar/faq",
