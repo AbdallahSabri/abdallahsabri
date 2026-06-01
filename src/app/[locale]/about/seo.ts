@@ -1,4 +1,6 @@
-export const getPersonSchema = (t: any) => ({
+import type { useTranslations } from "next-intl";
+
+export const getPersonSchema = (t: ReturnType<typeof useTranslations>) => ({
   "@context": "https://schema.org",
   "@type": "Person",
   "@id": "https://abdallahsabri.com/about#person",
@@ -20,11 +22,11 @@ export const getPersonSchema = (t: any) => ({
     "@type": "Organization",
     name: t("schemaOrganization"),
   },
-  knowsAbout: t("schemaSkills", { returnObjects: true }),
+  knowsAbout: t.raw("schemaSkills"),
   alumniOf: {
     "@type": "EducationalOrganization",
     name: t("schemaUniversity"),
     url: "https://www.aqou.edu.ps/",
   },
-  award: t("schemaAwards", { returnObjects: true }),
+  award: t.raw("schemaAwards"),
 });
